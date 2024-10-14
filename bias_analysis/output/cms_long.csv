@@ -1,0 +1,1057 @@
+"","Dataset","Model","Feature","Feature_Value","group_size","Feature_EN","Feature_Value_EN","stage","Metric","Value"
+"1","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","TN",19.4444444444444
+"2","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","FP",28.4722222222222
+"3","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","FN",17.3611111111111
+"4","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","TP",34.7222222222222
+"5","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","TOTAL",100
+"6","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","ACT_N",47.9166666666667
+"7","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","ACT_P",52.0833333333333
+"8","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","PRED_P",63.1944444444444
+"9","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","PRED_N",36.8055555555556
+"10","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","FPR",59.4202898550725
+"11","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","PPV",54.945054945055
+"12","Pilot","BR","geslacht","M",144,"gender","M","Pilot/BR","ERROR",45.8333333333333
+"13","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","TN",16.40625
+"14","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","FP",39.84375
+"15","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","FN",14.0625
+"16","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","TP",29.6875
+"17","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","TOTAL",100
+"18","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","ACT_N",56.25
+"19","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","ACT_P",43.75
+"20","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","PRED_P",69.53125
+"21","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","PRED_N",30.46875
+"22","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","FPR",70.8333333333333
+"23","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","PPV",42.6966292134831
+"24","Pilot","BR","geslacht","V",128,"gender","F","Pilot/BR","ERROR",53.90625
+"25","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","TN",NA
+"26","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","FP",NA
+"27","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","FN",NA
+"28","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","TP",NA
+"29","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","TOTAL",NA
+"30","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","ACT_N",NA
+"31","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","ACT_P",NA
+"32","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","PRED_P",NA
+"33","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","PRED_N",NA
+"34","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","FPR",NA
+"35","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","PPV",NA
+"36","Pilot","BR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/BR","ERROR",NA
+"37","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","TN",20.3389830508475
+"38","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","FP",31.7796610169492
+"39","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","FN",16.9491525423729
+"40","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","TP",30.9322033898305
+"41","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","TOTAL",100
+"42","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","ACT_N",52.1186440677966
+"43","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","ACT_P",47.8813559322034
+"44","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","PRED_P",62.7118644067797
+"45","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","PRED_N",37.2881355932203
+"46","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","FPR",60.9756097560976
+"47","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","PPV",49.3243243243243
+"48","Pilot","BR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/BR","ERROR",48.728813559322
+"49","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","TN",11.1842105263158
+"50","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","FP",38.1578947368421
+"51","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","FN",13.1578947368421
+"52","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","TP",37.5
+"53","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","TOTAL",100
+"54","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","ACT_N",49.3421052631579
+"55","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","ACT_P",50.6578947368421
+"56","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","PRED_P",75.6578947368421
+"57","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","PRED_N",24.3421052631579
+"58","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","FPR",77.3333333333333
+"59","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","PPV",49.5652173913043
+"60","Pilot","BR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/BR","ERROR",51.3157894736842
+"61","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","TN",26.6666666666667
+"62","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","FP",28.3333333333333
+"63","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","FN",19.1666666666667
+"64","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","TP",25.8333333333333
+"65","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","TOTAL",100
+"66","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","ACT_N",55
+"67","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","ACT_P",45
+"68","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","PRED_P",54.1666666666667
+"69","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","PRED_N",45.8333333333333
+"70","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","FPR",51.5151515151515
+"71","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","PPV",47.6923076923077
+"72","Pilot","BR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/BR","ERROR",47.5
+"73","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","TN",16.3461538461538
+"74","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","FP",34.1346153846154
+"75","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","FN",12.5
+"76","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","TP",37.0192307692308
+"77","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","TOTAL",100
+"78","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","ACT_N",50.4807692307692
+"79","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","ACT_P",49.5192307692308
+"80","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","PRED_P",71.1538461538462
+"81","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","PRED_N",28.8461538461538
+"82","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","FPR",67.6190476190476
+"83","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","PPV",52.027027027027
+"84","Pilot","BR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/BR","ERROR",46.6346153846154
+"85","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","TN",23.4375
+"86","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","FP",32.8125
+"87","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","FN",26.5625
+"88","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","TP",17.1875
+"89","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","TOTAL",100
+"90","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","ACT_N",56.25
+"91","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","ACT_P",43.75
+"92","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","PRED_P",50
+"93","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","PRED_N",50
+"94","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","FPR",58.3333333333333
+"95","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","PPV",34.375
+"96","Pilot","BR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/BR","ERROR",59.375
+"97","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","TN",18.3962264150943
+"98","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","FP",35.377358490566
+"99","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","FN",15.0943396226415
+"100","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","TP",31.1320754716981
+"101","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","TOTAL",100
+"102","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","ACT_N",53.7735849056604
+"103","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","ACT_P",46.2264150943396
+"104","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","PRED_P",66.5094339622642
+"105","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","PRED_N",33.4905660377358
+"106","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","FPR",65.7894736842105
+"107","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","PPV",46.8085106382979
+"108","Pilot","BR","IsNederlands","1",212,"Dutch","Dutch","Pilot/BR","ERROR",50.4716981132076
+"109","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","TN",16.9491525423729
+"110","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","FP",28.8135593220339
+"111","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","FN",18.6440677966102
+"112","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","TP",35.593220338983
+"113","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","TOTAL",100
+"114","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","ACT_N",45.7627118644068
+"115","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","ACT_P",54.2372881355932
+"116","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","PRED_P",64.406779661017
+"117","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","PRED_N",35.593220338983
+"118","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","FPR",62.962962962963
+"119","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","PPV",55.2631578947368
+"120","Pilot","BR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/BR","ERROR",47.4576271186441
+"121","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","TN",17.479674796748
+"122","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","FP",34.5528455284553
+"123","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","FN",15.0406504065041
+"124","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","TP",32.9268292682927
+"125","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","TOTAL",100
+"126","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","ACT_N",52.0325203252033
+"127","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","ACT_P",47.9674796747967
+"128","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","PRED_P",67.479674796748
+"129","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","PRED_N",32.520325203252
+"130","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","FPR",66.40625
+"131","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","PPV",48.7951807228916
+"132","Pilot","BR","IsWesters","1",246,"Western","Western","Pilot/BR","ERROR",49.5934959349593
+"133","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","TN",NA
+"134","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","FP",NA
+"135","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","FN",NA
+"136","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","TP",NA
+"137","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","TOTAL",NA
+"138","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","ACT_N",NA
+"139","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","ACT_P",NA
+"140","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","PRED_P",NA
+"141","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","PRED_N",NA
+"142","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","FPR",NA
+"143","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","PPV",NA
+"144","Pilot","BR","IsWesters","0",NA,"Western","Not Western","Pilot/BR","ERROR",NA
+"145","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","TN",15.9722222222222
+"146","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","FP",31.9444444444444
+"147","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","FN",18.0555555555556
+"148","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","TP",34.0277777777778
+"149","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","TOTAL",100
+"150","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","ACT_N",47.9166666666667
+"151","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","ACT_P",52.0833333333333
+"152","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","PRED_P",65.9722222222222
+"153","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","PRED_N",34.0277777777778
+"154","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","FPR",66.6666666666667
+"155","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","PPV",51.578947368421
+"156","Pilot","AR","geslacht","M",144,"gender","M","Pilot/AR","ERROR",50
+"157","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","TN",14.84375
+"158","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","FP",41.40625
+"159","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","FN",15.625
+"160","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","TP",28.125
+"161","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","TOTAL",100
+"162","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","ACT_N",56.25
+"163","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","ACT_P",43.75
+"164","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","PRED_P",69.53125
+"165","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","PRED_N",30.46875
+"166","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","FPR",73.6111111111111
+"167","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","PPV",40.4494382022472
+"168","Pilot","AR","geslacht","V",128,"gender","F","Pilot/AR","ERROR",57.03125
+"169","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","TN",NA
+"170","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","FP",NA
+"171","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","FN",NA
+"172","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","TP",NA
+"173","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","TOTAL",NA
+"174","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","ACT_N",NA
+"175","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","ACT_P",NA
+"176","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","PRED_P",NA
+"177","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","PRED_N",NA
+"178","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","FPR",NA
+"179","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","PPV",NA
+"180","Pilot","AR","Leeftijd&lt;30","1",NA,"Age < 30","below 30","Pilot/AR","ERROR",NA
+"181","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","TN",17.3728813559322
+"182","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","FP",34.7457627118644
+"183","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","FN",18.2203389830508
+"184","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","TP",29.6610169491525
+"185","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","TOTAL",100
+"186","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","ACT_N",52.1186440677966
+"187","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","ACT_P",47.8813559322034
+"188","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","PRED_P",64.4067796610169
+"189","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","PRED_N",35.593220338983
+"190","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","FPR",66.6666666666667
+"191","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","PPV",46.0526315789474
+"192","Pilot","AR","Leeftijd&lt;30","0",236,"Age < 30","above 30","Pilot/AR","ERROR",52.9661016949153
+"193","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","TN",11.1842105263158
+"194","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","FP",38.1578947368421
+"195","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","FN",15.1315789473684
+"196","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","TP",35.5263157894737
+"197","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","TOTAL",100
+"198","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","ACT_N",49.3421052631579
+"199","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","ACT_P",50.6578947368421
+"200","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","PRED_P",73.6842105263158
+"201","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","PRED_N",26.3157894736842
+"202","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","FPR",77.3333333333333
+"203","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","PPV",48.2142857142857
+"204","Pilot","AR","Leeftijd&lt;40","1",152,"Age < 40","below 40","Pilot/AR","ERROR",53.2894736842105
+"205","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","TN",20.8333333333333
+"206","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","FP",34.1666666666667
+"207","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","FN",19.1666666666667
+"208","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","TP",25.8333333333333
+"209","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","TOTAL",100
+"210","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","ACT_N",55
+"211","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","ACT_P",45
+"212","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","PRED_P",60
+"213","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","PRED_N",40
+"214","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","FPR",62.1212121212121
+"215","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","PPV",43.0555555555556
+"216","Pilot","AR","Leeftijd&lt;40","0",120,"Age < 40","above 40","Pilot/AR","ERROR",53.3333333333333
+"217","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","TN",14.9038461538462
+"218","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","FP",35.5769230769231
+"219","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","FN",13.4615384615385
+"220","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","TP",36.0576923076923
+"221","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","TOTAL",100
+"222","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","ACT_N",50.4807692307692
+"223","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","ACT_P",49.5192307692308
+"224","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","PRED_P",71.6346153846154
+"225","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","PRED_N",28.3653846153846
+"226","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","FPR",70.4761904761905
+"227","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","PPV",50.3355704697987
+"228","Pilot","AR","Leeftijd&lt;50","1",208,"Age < 50","below 50","Pilot/AR","ERROR",49.0384615384615
+"229","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","TN",17.1875
+"230","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","FP",39.0625
+"231","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","FN",28.125
+"232","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","TP",15.625
+"233","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","TOTAL",100
+"234","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","ACT_N",56.25
+"235","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","ACT_P",43.75
+"236","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","PRED_P",54.6875
+"237","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","PRED_N",45.3125
+"238","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","FPR",69.4444444444444
+"239","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","PPV",28.5714285714286
+"240","Pilot","AR","Leeftijd&lt;50","0",64,"Age < 50","above 50","Pilot/AR","ERROR",67.1875
+"241","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","TN",14.622641509434
+"242","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","FP",39.1509433962264
+"243","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","FN",16.0377358490566
+"244","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","TP",30.188679245283
+"245","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","TOTAL",100
+"246","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","ACT_N",53.7735849056604
+"247","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","ACT_P",46.2264150943396
+"248","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","PRED_P",69.3396226415094
+"249","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","PRED_N",30.6603773584906
+"250","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","FPR",72.8070175438597
+"251","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","PPV",43.5374149659864
+"252","Pilot","AR","IsNederlands","1",212,"Dutch","Dutch","Pilot/AR","ERROR",55.188679245283
+"253","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","TN",18.6440677966102
+"254","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","FP",27.1186440677966
+"255","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","FN",20.3389830508475
+"256","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","TP",33.8983050847458
+"257","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","TOTAL",100
+"258","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","ACT_N",45.7627118644068
+"259","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","ACT_P",54.2372881355932
+"260","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","PRED_P",61.0169491525424
+"261","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","PRED_N",38.9830508474576
+"262","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","FPR",59.2592592592593
+"263","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","PPV",55.5555555555556
+"264","Pilot","AR","IsNederlands","0",59,"Dutch","Not Dutch","Pilot/AR","ERROR",47.4576271186441
+"265","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","TN",14.2276422764228
+"266","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","FP",37.8048780487805
+"267","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","FN",15.8536585365854
+"268","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","TP",32.1138211382114
+"269","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","TOTAL",100
+"270","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","ACT_N",52.0325203252033
+"271","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","ACT_P",47.9674796747967
+"272","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","PRED_P",69.9186991869919
+"273","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","PRED_N",30.0813008130081
+"274","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","FPR",72.65625
+"275","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","PPV",45.9302325581395
+"276","Pilot","AR","IsWesters","1",246,"Western","Western","Pilot/AR","ERROR",53.6585365853659
+"277","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","TN",NA
+"278","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","FP",NA
+"279","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","FN",NA
+"280","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","TP",NA
+"281","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","TOTAL",NA
+"282","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","ACT_N",NA
+"283","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","ACT_P",NA
+"284","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","PRED_P",NA
+"285","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","PRED_N",NA
+"286","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","FPR",NA
+"287","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","PPV",NA
+"288","Pilot","AR","IsWesters","0",NA,"Western","Not Western","Pilot/AR","ERROR",NA
+"289","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","TN",33.7662337662338
+"290","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","FP",15.8730158730159
+"291","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","FN",25.3968253968254
+"292","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","TP",24.963924963925
+"293","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","TOTAL",100
+"294","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","ACT_N",49.6392496392496
+"295","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","ACT_P",50.3607503607504
+"296","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","PRED_P",40.8369408369408
+"297","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","PRED_N",59.1630591630592
+"298","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","FPR",31.9767441860465
+"299","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","PPV",61.13074204947
+"300","Prepilot","BR","geslacht","M",693,"gender","M","Prepilot/BR","ERROR",41.2698412698413
+"301","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","TN",35.5357142857143
+"302","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","FP",13.2142857142857
+"303","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","FN",25.7142857142857
+"304","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","TP",25.5357142857143
+"305","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","TOTAL",100
+"306","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","ACT_N",48.75
+"307","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","ACT_P",51.25
+"308","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","PRED_P",38.75
+"309","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","PRED_N",61.25
+"310","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","FPR",27.1062271062271
+"311","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","PPV",65.8986175115207
+"312","Prepilot","BR","geslacht","V",560,"gender","F","Prepilot/BR","ERROR",38.9285714285714
+"313","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","TN",42.1621621621622
+"314","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","FP",15.6756756756757
+"315","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","FN",22.1621621621622
+"316","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","TP",20
+"317","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","TOTAL",100
+"318","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","ACT_N",57.8378378378378
+"319","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","ACT_P",42.1621621621622
+"320","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","PRED_P",35.6756756756757
+"321","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","PRED_N",64.3243243243243
+"322","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","FPR",27.1028037383178
+"323","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","PPV",56.0606060606061
+"324","Prepilot","BR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/BR","ERROR",37.8378378378378
+"325","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","TN",33.1775700934579
+"326","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","FP",14.5794392523364
+"327","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","FN",26.0747663551402
+"328","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","TP",26.1682242990654
+"329","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","TOTAL",100
+"330","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","ACT_N",47.7570093457944
+"331","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","ACT_P",52.2429906542056
+"332","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","PRED_P",40.7476635514019
+"333","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","PRED_N",59.2523364485981
+"334","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","FPR",30.5283757338552
+"335","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","PPV",64.2201834862385
+"336","Prepilot","BR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/BR","ERROR",40.6542056074766
+"337","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","TN",NA
+"338","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","FP",NA
+"339","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","FN",NA
+"340","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","TP",NA
+"341","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","TOTAL",NA
+"342","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","ACT_N",NA
+"343","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","ACT_P",NA
+"344","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","PRED_P",NA
+"345","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","PRED_N",NA
+"346","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","FPR",NA
+"347","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","PPV",NA
+"348","Prepilot","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/BR","ERROR",NA
+"349","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","TN",34.357316087308
+"350","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","FP",14.7130153597413
+"351","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","FN",25.5456750202102
+"352","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","TP",25.3839935327405
+"353","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","TOTAL",100
+"354","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","ACT_N",49.0703314470493
+"355","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","ACT_P",50.9296685529507
+"356","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","PRED_P",40.0970088924818
+"357","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","PRED_N",59.9029911075182
+"358","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","FPR",29.9835255354201
+"359","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","PPV",63.3064516129032
+"360","Prepilot","BR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/BR","ERROR",40.2586903799515
+"361","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","TN",32.0707070707071
+"362","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","FP",15.9090909090909
+"363","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","FN",25
+"364","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","TP",27.020202020202
+"365","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","TOTAL",100
+"366","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","ACT_N",47.979797979798
+"367","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","ACT_P",52.020202020202
+"368","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","PRED_P",42.9292929292929
+"369","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","PRED_N",57.0707070707071
+"370","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","FPR",33.1578947368421
+"371","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","PPV",62.9411764705882
+"372","Prepilot","BR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/BR","ERROR",40.9090909090909
+"373","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","TN",35.6228172293364
+"374","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","FP",14.2025611175786
+"375","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","FN",25.7275902211874
+"376","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","TP",24.4470314318976
+"377","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","TOTAL",100
+"378","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","ACT_N",49.825378346915
+"379","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","ACT_P",50.174621653085
+"380","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","PRED_P",38.6495925494761
+"381","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","PRED_N",61.3504074505239
+"382","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","FPR",28.5046728971963
+"383","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","PPV",63.2530120481928
+"384","Prepilot","BR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/BR","ERROR",39.930151338766
+"385","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","TN",31.4028314028314
+"386","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","FP",15.4440154440154
+"387","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","FN",24.5817245817246
+"388","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","TP",28.5714285714286
+"389","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","TOTAL",100
+"390","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","ACT_N",46.8468468468469
+"391","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","ACT_P",53.1531531531532
+"392","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","PRED_P",44.015444015444
+"393","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","PRED_N",55.984555984556
+"394","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","FPR",32.967032967033
+"395","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","PPV",64.9122807017544
+"396","Prepilot","BR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/BR","ERROR",40.02574002574
+"397","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","TN",39.5397489539749
+"398","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","FP",13.5983263598326
+"399","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","FN",26.9874476987448
+"400","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","TP",19.8744769874477
+"401","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","TOTAL",100
+"402","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","ACT_N",53.1380753138075
+"403","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","ACT_P",46.8619246861925
+"404","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","PRED_P",33.4728033472803
+"405","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","PRED_N",66.5271966527197
+"406","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","FPR",25.5905511811024
+"407","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","PPV",59.375
+"408","Prepilot","BR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/BR","ERROR",40.5857740585774
+"409","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","TN",33.1
+"410","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","FP",15.2
+"411","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","FN",25.1
+"412","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","TP",26.6
+"413","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","TOTAL",100
+"414","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","ACT_N",48.3
+"415","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","ACT_P",51.7
+"416","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","PRED_P",41.8
+"417","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","PRED_N",58.2
+"418","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","FPR",31.4699792960663
+"419","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","PPV",63.6363636363636
+"420","Prepilot","BR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/BR","ERROR",40.3
+"421","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","TN",40
+"422","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","FP",12.9411764705882
+"423","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","FN",27.0588235294118
+"424","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","TP",20
+"425","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","TOTAL",100
+"426","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","ACT_N",52.9411764705882
+"427","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","ACT_P",47.0588235294118
+"428","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","PRED_P",32.9411764705882
+"429","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","PRED_N",67.0588235294118
+"430","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","FPR",24.4444444444444
+"431","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","PPV",60.7142857142857
+"432","Prepilot","BR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/BR","ERROR",40
+"433","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","TN",39.2694063926941
+"434","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","FP",13.6986301369863
+"435","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","FN",26.1415525114155
+"436","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","TP",20.8904109589041
+"437","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","TOTAL",100
+"438","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","ACT_N",52.9680365296804
+"439","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","ACT_P",47.0319634703196
+"440","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","PRED_P",34.5890410958904
+"441","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","PRED_N",65.4109589041096
+"442","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","FPR",25.8620689655172
+"443","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","PPV",60.3960396039604
+"444","Prepilot","BR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/BR","ERROR",39.8401826484018
+"445","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","TN",22.6086956521739
+"446","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","FP",17.6811594202899
+"447","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","FN",24.3478260869565
+"448","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","TP",35.3623188405797
+"449","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","TOTAL",100
+"450","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","ACT_N",40.2898550724638
+"451","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","ACT_P",59.7101449275362
+"452","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","PRED_P",53.0434782608696
+"453","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","PRED_N",46.9565217391304
+"454","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","FPR",43.8848920863309
+"455","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","PPV",66.6666666666667
+"456","Prepilot","BR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/BR","ERROR",42.0289855072464
+"457","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","TN",36.5328109696376
+"458","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","FP",12.9285014691479
+"459","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","FN",26.052889324192
+"460","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","TP",24.4857982370225
+"461","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","TOTAL",100
+"462","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","ACT_N",49.4613124387855
+"463","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","ACT_P",50.5386875612145
+"464","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","PRED_P",37.4142997061704
+"465","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","PRED_N",62.5857002938296
+"466","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","FPR",26.1386138613861
+"467","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","PPV",65.4450261780105
+"468","Prepilot","BR","IsWesters","1",1021,"Western","Western","Prepilot/BR","ERROR",38.9813907933399
+"469","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","TN",24.6231155778894
+"470","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","FP",24.6231155778894
+"471","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","FN",23.1155778894472
+"472","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","TP",27.6381909547739
+"473","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","TOTAL",100
+"474","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","ACT_N",49.2462311557789
+"475","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","ACT_P",50.7537688442211
+"476","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","PRED_P",52.2613065326633
+"477","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","PRED_N",47.7386934673367
+"478","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","FPR",50
+"479","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","PPV",52.8846153846154
+"480","Prepilot","BR","IsWesters","0",199,"Western","Not Western","Prepilot/BR","ERROR",47.7386934673367
+"481","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","TN",37.8066378066378
+"482","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","FP",11.8326118326118
+"483","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","FN",30.8802308802309
+"484","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","TP",19.4805194805195
+"485","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","TOTAL",100
+"486","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","ACT_N",49.6392496392496
+"487","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","ACT_P",50.3607503607504
+"488","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","PRED_P",31.3131313131313
+"489","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","PRED_N",68.6868686868687
+"490","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","FPR",23.8372093023256
+"491","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","PPV",62.2119815668203
+"492","Prepilot","AR","geslacht","M",693,"gender","M","Prepilot/AR","ERROR",42.7128427128427
+"493","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","TN",39.4642857142857
+"494","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","FP",9.28571428571429
+"495","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","FN",30.1785714285714
+"496","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","TP",21.0714285714286
+"497","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","TOTAL",100
+"498","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","ACT_N",48.75
+"499","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","ACT_P",51.25
+"500","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","PRED_P",30.3571428571429
+"501","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","PRED_N",69.6428571428571
+"502","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","FPR",19.047619047619
+"503","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","PPV",69.4117647058823
+"504","Prepilot","AR","geslacht","V",560,"gender","F","Prepilot/AR","ERROR",39.4642857142857
+"505","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","TN",45.4054054054054
+"506","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","FP",12.4324324324324
+"507","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","FN",25.9459459459459
+"508","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","TP",16.2162162162162
+"509","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","TOTAL",100
+"510","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","ACT_N",57.8378378378378
+"511","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","ACT_P",42.1621621621622
+"512","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","PRED_P",28.6486486486487
+"513","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","PRED_N",71.3513513513514
+"514","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","FPR",21.4953271028037
+"515","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","PPV",56.6037735849057
+"516","Prepilot","AR","IsFulltimeParent","1",185,"IsFulltimeParent","Full-time parent","Prepilot/AR","ERROR",38.3783783783784
+"517","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","TN",37.2897196261682
+"518","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","FP",10.4672897196262
+"519","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","FN",31.3084112149533
+"520","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","TP",20.9345794392523
+"521","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","TOTAL",100
+"522","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","ACT_N",47.7570093457944
+"523","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","ACT_P",52.2429906542056
+"524","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","PRED_P",31.4018691588785
+"525","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","PRED_N",68.5981308411215
+"526","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","FPR",21.9178082191781
+"527","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","PPV",66.6666666666667
+"528","Prepilot","AR","IsFulltimeParent","0",1070,"IsFulltimeParent","Not full-time parent","Prepilot/AR","ERROR",41.7757009345794
+"529","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","TN",NA
+"530","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","FP",NA
+"531","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","FN",NA
+"532","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","TP",NA
+"533","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","TOTAL",NA
+"534","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","ACT_N",NA
+"535","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","ACT_P",NA
+"536","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","PRED_P",NA
+"537","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","PRED_N",NA
+"538","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","FPR",NA
+"539","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","PPV",NA
+"540","Prepilot","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","Prepilot/AR","ERROR",NA
+"541","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","TN",38.3993532740501
+"542","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","FP",10.6709781729992
+"543","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","FN",30.6386418755053
+"544","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","TP",20.2910266774454
+"545","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","TOTAL",100
+"546","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","ACT_N",49.0703314470493
+"547","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","ACT_P",50.9296685529507
+"548","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","PRED_P",30.9620048504446
+"549","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","PRED_N",69.0379951495554
+"550","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","FPR",21.7462932454695
+"551","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","PPV",65.5352480417754
+"552","Prepilot","AR","IsParttimeParent","0",1237,"IsParttimeParent","Not part-time parent","Prepilot/AR","ERROR",41.3096200485044
+"553","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","TN",38.8888888888889
+"554","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","FP",9.09090909090909
+"555","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","FN",29.7979797979798
+"556","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","TP",22.2222222222222
+"557","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","TOTAL",100
+"558","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","ACT_N",47.979797979798
+"559","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","ACT_P",52.020202020202
+"560","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","PRED_P",31.3131313131313
+"561","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","PRED_N",68.6868686868687
+"562","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","FPR",18.9473684210526
+"563","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","PPV",70.9677419354839
+"564","Prepilot","AR","Leeftijd&lt;30","1",396,"Age < 30","below 30","Prepilot/AR","ERROR",38.8888888888889
+"565","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","TN",38.3003492433062
+"566","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","FP",11.5250291036088
+"567","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","FN",30.8498253783469
+"568","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","TP",19.3247962747381
+"569","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","TOTAL",100
+"570","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","ACT_N",49.825378346915
+"571","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","ACT_P",50.174621653085
+"572","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","PRED_P",30.8498253783469
+"573","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","PRED_N",69.1501746216531
+"574","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","FPR",23.1308411214953
+"575","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","PPV",62.6415094339623
+"576","Prepilot","AR","Leeftijd&lt;30","0",859,"Age < 30","above 30","Prepilot/AR","ERROR",42.3748544819558
+"577","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","TN",36.4221364221364
+"578","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","FP",10.4247104247104
+"579","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","FN",29.4723294723295
+"580","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","TP",23.6808236808237
+"581","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","TOTAL",100
+"582","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","ACT_N",46.8468468468468
+"583","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","ACT_P",53.1531531531532
+"584","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","PRED_P",34.1055341055341
+"585","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","PRED_N",65.8944658944659
+"586","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","FPR",22.2527472527473
+"587","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","PPV",69.433962264151
+"588","Prepilot","AR","Leeftijd&lt;40","1",777,"Age < 40","below 40","Prepilot/AR","ERROR",39.8970398970399
+"589","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","TN",41.8410041841004
+"590","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","FP",11.2970711297071
+"591","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","FN",32.2175732217573
+"592","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","TP",14.6443514644351
+"593","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","TOTAL",100
+"594","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","ACT_N",53.1380753138075
+"595","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","ACT_P",46.8619246861925
+"596","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","PRED_P",25.9414225941423
+"597","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","PRED_N",74.0585774058577
+"598","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","FPR",21.259842519685
+"599","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","PPV",56.4516129032258
+"600","Prepilot","AR","Leeftijd&lt;40","0",478,"Age < 40","above 40","Prepilot/AR","ERROR",43.5146443514644
+"601","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","TN",37.7
+"602","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","FP",10.6
+"603","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","FN",30
+"604","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","TP",21.7
+"605","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","TOTAL",100
+"606","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","ACT_N",48.3
+"607","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","ACT_P",51.7
+"608","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","PRED_P",32.3
+"609","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","PRED_N",67.7
+"610","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","FPR",21.9461697722567
+"611","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","PPV",67.1826625386997
+"612","Prepilot","AR","Leeftijd&lt;50","1",1000,"Age < 50","below 50","Prepilot/AR","ERROR",40.6
+"613","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","TN",41.5686274509804
+"614","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","FP",11.3725490196078
+"615","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","FN",32.5490196078431
+"616","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","TP",14.5098039215686
+"617","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","TOTAL",100
+"618","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","ACT_N",52.9411764705882
+"619","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","ACT_P",47.0588235294118
+"620","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","PRED_P",25.8823529411765
+"621","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","PRED_N",74.1176470588235
+"622","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","FPR",21.4814814814815
+"623","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","PPV",56.0606060606061
+"624","Prepilot","AR","Leeftijd&lt;50","0",255,"Age < 50","above 50","Prepilot/AR","ERROR",43.921568627451
+"625","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","TN",41.2100456621005
+"626","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","FP",11.7579908675799
+"627","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","FN",30.2511415525114
+"628","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","TP",16.7808219178082
+"629","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","TOTAL",100
+"630","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","ACT_N",52.9680365296804
+"631","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","ACT_P",47.0319634703196
+"632","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","PRED_P",28.5388127853881
+"633","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","PRED_N",71.4611872146119
+"634","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","FPR",22.198275862069
+"635","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","PPV",58.8
+"636","Prepilot","AR","IsNederlands","1",876,"Dutch","Dutch","Prepilot/AR","ERROR",42.0091324200913
+"637","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","TN",31.5942028985507
+"638","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","FP",8.69565217391304
+"639","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","FN",31.304347826087
+"640","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","TP",28.4057971014493
+"641","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","TOTAL",100
+"642","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","ACT_N",40.2898550724638
+"643","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","ACT_P",59.7101449275362
+"644","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","PRED_P",37.1014492753623
+"645","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","PRED_N",62.8985507246377
+"646","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","FPR",21.5827338129496
+"647","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","PPV",76.5625
+"648","Prepilot","AR","IsNederlands","0",345,"Dutch","Not Dutch","Prepilot/AR","ERROR",40
+"649","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","TN",38.2957884427032
+"650","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","FP",11.1655239960823
+"651","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","FN",30.3623898139079
+"652","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","TP",20.1762977473066
+"653","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","TOTAL",100
+"654","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","ACT_N",49.4613124387855
+"655","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","ACT_P",50.5386875612145
+"656","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","PRED_P",31.3418217433888
+"657","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","PRED_N",68.6581782566112
+"658","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","FPR",22.5742574257426
+"659","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","PPV",64.375
+"660","Prepilot","AR","IsWesters","1",1021,"Western","Western","Prepilot/AR","ERROR",41.5279138099902
+"661","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","TN",39.6984924623116
+"662","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","FP",9.54773869346734
+"663","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","FN",31.1557788944724
+"664","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","TP",19.5979899497487
+"665","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","TOTAL",100
+"666","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","ACT_N",49.2462311557789
+"667","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","ACT_P",50.7537688442211
+"668","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","PRED_P",29.1457286432161
+"669","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","PRED_N",70.8542713567839
+"670","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","FPR",19.3877551020408
+"671","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","PPV",67.2413793103448
+"672","Prepilot","AR","IsWesters","0",199,"Western","Not Western","Prepilot/AR","ERROR",40.7035175879397
+"673","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","TN",31.6
+"674","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","FP",10.4
+"675","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","FN",33.7
+"676","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","TP",24.3
+"677","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","TOTAL",100
+"678","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","ACT_N",42
+"679","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","ACT_P",58
+"680","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","PRED_P",34.7
+"681","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","PRED_N",65.3
+"682","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","FPR",24.7619047619048
+"683","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","PPV",70.028818443804
+"684","TrainTest","BR","geslacht","M",2000,"gender","M","TrainTest/BR","ERROR",44.1
+"685","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","TN",38.8643067846608
+"686","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","FP",12.0206489675516
+"687","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","FN",31.7109144542773
+"688","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","TP",17.4041297935103
+"689","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","TOTAL",100
+"690","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","ACT_N",50.8849557522124
+"691","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","ACT_P",49.1150442477876
+"692","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","PRED_P",29.424778761062
+"693","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","PRED_N",70.575221238938
+"694","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","FPR",23.6231884057971
+"695","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","PPV",59.1478696741855
+"696","TrainTest","BR","geslacht","V",1356,"gender","F","TrainTest/BR","ERROR",43.7315634218289
+"697","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","TN",NA
+"698","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","FP",NA
+"699","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","FN",NA
+"700","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","TP",NA
+"701","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","TOTAL",NA
+"702","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","ACT_N",NA
+"703","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","ACT_P",NA
+"704","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","PRED_P",NA
+"705","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","PRED_N",NA
+"706","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","FPR",NA
+"707","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","PPV",NA
+"708","TrainTest","BR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/BR","ERROR",NA
+"709","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","TN",31.939564300773
+"710","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","FP",11.5952213633169
+"711","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","FN",32.7828531271961
+"712","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","TP",23.682361208714
+"713","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","TOTAL",100
+"714","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","ACT_N",43.53478566409
+"715","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","ACT_P",56.46521433591
+"716","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","PRED_P",35.2775825720309
+"717","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","PRED_N",64.7224174279691
+"718","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","FPR",26.634382566586
+"719","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","PPV",67.1314741035857
+"720","TrainTest","BR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/BR","ERROR",44.378074490513
+"721","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","TN",NA
+"722","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","FP",NA
+"723","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","FN",NA
+"724","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","TP",NA
+"725","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","TOTAL",NA
+"726","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","ACT_N",NA
+"727","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","ACT_P",NA
+"728","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","PRED_P",NA
+"729","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","PRED_N",NA
+"730","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","FPR",NA
+"731","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","PPV",NA
+"732","TrainTest","BR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/BR","ERROR",NA
+"733","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","TN",34.2215568862275
+"734","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","FP",10.9880239520958
+"735","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","FN",33.0239520958084
+"736","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","TP",21.7664670658683
+"737","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","TOTAL",100
+"738","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","ACT_N",45.2095808383234
+"739","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","ACT_P",54.7904191616766
+"740","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","PRED_P",32.7544910179641
+"741","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","PRED_N",67.2455089820359
+"742","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","FPR",24.3046357615894
+"743","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","PPV",66.453382084095
+"744","TrainTest","BR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/BR","ERROR",44.0119760479042
+"745","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","TN",27.7520814061055
+"746","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","FP",13.5985198889917
+"747","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","FN",32.1924144310823
+"748","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","TP",26.4569842738205
+"749","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","TOTAL",100
+"750","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","ACT_N",41.3506012950971
+"751","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","ACT_P",58.6493987049029
+"752","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","PRED_P",40.0555041628122
+"753","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","PRED_N",59.9444958371878
+"754","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","FPR",32.8859060402685
+"755","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","PPV",66.0508083140878
+"756","TrainTest","BR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/BR","ERROR",45.790934320074
+"757","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","TN",37.3327578765645
+"758","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","FP",9.75399223133362
+"759","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","FN",33.1894691411308
+"760","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","TP",19.7237807509711
+"761","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","TOTAL",100
+"762","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","ACT_N",47.0867501078981
+"763","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","ACT_P",52.9132498921019
+"764","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","PRED_P",29.4777729823047
+"765","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","PRED_N",70.5222270176953
+"766","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","FPR",20.7149404216315
+"767","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","PPV",66.9106881405564
+"768","TrainTest","BR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/BR","ERROR",42.9434613724644
+"769","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","TN",31.4841849148419
+"770","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","FP",12.5060827250608
+"771","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","FN",32.2627737226277
+"772","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","TP",23.7469586374696
+"773","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","TOTAL",100
+"774","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","ACT_N",43.9902676399027
+"775","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","ACT_P",56.0097323600973
+"776","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","PRED_P",36.2530413625304
+"777","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","PRED_N",63.7469586374696
+"778","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","FPR",28.429203539823
+"779","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","PPV",65.503355704698
+"780","TrainTest","BR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/BR","ERROR",44.7688564476886
+"781","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","TN",38.5703648548027
+"782","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","FP",8.6373790022338
+"783","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","FN",33.8049143708116
+"784","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","TP",18.9873417721519
+"785","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","TOTAL",100
+"786","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","ACT_N",47.2077438570365
+"787","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","ACT_P",52.7922561429635
+"788","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","PRED_P",27.6247207743857
+"789","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","PRED_N",72.3752792256143
+"790","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","FPR",18.2965299684543
+"791","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","PPV",68.733153638814
+"792","TrainTest","BR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/BR","ERROR",42.4422933730454
+"793","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","TN",32.5912408759124
+"794","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","FP",11.970802919708
+"795","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","FN",32.5912408759124
+"796","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","TP",22.8467153284672
+"797","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","TOTAL",100
+"798","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","ACT_N",44.5620437956204
+"799","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","ACT_P",55.4379562043796
+"800","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","PRED_P",34.8175182481752
+"801","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","PRED_N",65.1824817518248
+"802","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","FPR",26.8632268632269
+"803","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","PPV",65.6184486373166
+"804","TrainTest","BR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/BR","ERROR",44.5620437956204
+"805","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","TN",41.3373860182371
+"806","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","FP",6.83890577507599
+"807","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","FN",34.0425531914894
+"808","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","TP",17.7811550151976
+"809","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","TOTAL",100
+"810","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","ACT_N",48.1762917933131
+"811","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","ACT_P",51.8237082066869
+"812","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","PRED_P",24.6200607902736
+"813","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","PRED_N",75.3799392097264
+"814","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","FPR",14.1955835962145
+"815","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","PPV",72.2222222222222
+"816","TrainTest","BR","Leeftijd&lt;50","0",658,"Age < 50","above 50","TrainTest/BR","ERROR",40.8814589665653
+"817","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","TN",34.4132469402448
+"818","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","FP",10.943124550036
+"819","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","FN",32.9013678905688
+"820","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","TP",21.7422606191505
+"821","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","TOTAL",100
+"822","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","ACT_N",45.3563714902808
+"823","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","ACT_P",54.6436285097192
+"824","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","PRED_P",32.6853851691865
+"825","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","PRED_N",67.3146148308135
+"826","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","FPR",24.1269841269841
+"827","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","PPV",66.5198237885463
+"828","TrainTest","BR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/BR","ERROR",43.8444924406048
+"829","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","TN",36.3636363636364
+"830","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","FP",11.8577075098814
+"831","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","FN",31.2252964426877
+"832","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","TP",20.5533596837945
+"833","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","TOTAL",100
+"834","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","ACT_N",48.2213438735178
+"835","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","ACT_P",51.7786561264822
+"836","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","PRED_P",32.4110671936759
+"837","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","PRED_N",67.5889328063241
+"838","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","FPR",24.5901639344262
+"839","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","PPV",63.4146341463415
+"840","TrainTest","BR","IsNederlands","0",506,"Dutch","Not Dutch","TrainTest/BR","ERROR",43.0830039525692
+"841","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","TN",34.2330030748206
+"842","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","FP",11.1035189613939
+"843","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","FN",32.8322514519986
+"844","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","TP",21.8312265117868
+"845","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","TOTAL",100
+"846","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","ACT_N",45.3365220362146
+"847","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","ACT_P",54.6634779637855
+"848","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","PRED_P",32.9347454731807
+"849","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","PRED_N",67.0652545268193
+"850","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","FPR",24.4913338357197
+"851","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","PPV",66.2863070539419
+"852","TrainTest","BR","IsWesters","1",2927,"Western","Western","TrainTest/BR","ERROR",43.9357704133926
+"853","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","TN",NA
+"854","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","FP",NA
+"855","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","FN",NA
+"856","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","TP",NA
+"857","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","TOTAL",NA
+"858","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","ACT_N",NA
+"859","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","ACT_P",NA
+"860","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","PRED_P",NA
+"861","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","PRED_N",NA
+"862","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","FPR",NA
+"863","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","PPV",NA
+"864","TrainTest","BR","IsWesters","0",NA,"Western","Not Western","TrainTest/BR","ERROR",NA
+"865","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","TN",33.65
+"866","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","FP",8.35
+"867","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","FN",36.55
+"868","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","TP",21.45
+"869","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","TOTAL",100
+"870","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","ACT_N",42
+"871","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","ACT_P",58
+"872","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","PRED_P",29.8
+"873","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","PRED_N",70.2
+"874","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","FPR",19.8809523809524
+"875","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","PPV",71.9798657718121
+"876","TrainTest","AR","geslacht","M",2000,"gender","M","TrainTest/AR","ERROR",44.9
+"877","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","TN",41.1504424778761
+"878","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","FP",9.73451327433628
+"879","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","FN",32.5958702064897
+"880","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","TP",16.5191740412979
+"881","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","TOTAL",100
+"882","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","ACT_N",50.8849557522124
+"883","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","ACT_P",49.1150442477876
+"884","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","PRED_P",26.2536873156342
+"885","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","PRED_N",73.7463126843658
+"886","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","FPR",19.1304347826087
+"887","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","PPV",62.9213483146067
+"888","TrainTest","AR","geslacht","V",1356,"gender","F","TrainTest/AR","ERROR",42.330383480826
+"889","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","TN",NA
+"890","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","FP",NA
+"891","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","FN",NA
+"892","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","TP",NA
+"893","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","TOTAL",NA
+"894","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","ACT_N",NA
+"895","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","ACT_P",NA
+"896","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","PRED_P",NA
+"897","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","PRED_N",NA
+"898","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","FPR",NA
+"899","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","PPV",NA
+"900","TrainTest","AR","IsFulltimeParent","1",NA,"IsFulltimeParent","Full-time parent","TrainTest/AR","ERROR",NA
+"901","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","TN",34.328882642305
+"902","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","FP",9.20590302178496
+"903","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","FN",35.4181307097681
+"904","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","TP",21.047083626142
+"905","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","TOTAL",100
+"906","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","ACT_N",43.53478566409
+"907","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","ACT_P",56.46521433591
+"908","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","PRED_P",30.2529866479269
+"909","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","PRED_N",69.7470133520731
+"910","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","FPR",21.1460855528652
+"911","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","PPV",69.5702671312427
+"912","TrainTest","AR","IsFulltimeParent","0",2846,"IsFulltimeParent","Not full-time parent","TrainTest/AR","ERROR",44.6240337315531
+"913","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","TN",NA
+"914","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","FP",NA
+"915","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","FN",NA
+"916","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","TP",NA
+"917","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","TOTAL",NA
+"918","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","ACT_N",NA
+"919","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","ACT_P",NA
+"920","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","PRED_P",NA
+"921","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","PRED_N",NA
+"922","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","FPR",NA
+"923","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","PPV",NA
+"924","TrainTest","AR","IsParttimeParent","1",NA,"IsParttimeParent","Part-time parent","TrainTest/AR","ERROR",NA
+"925","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","TN",36.377245508982
+"926","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","FP",8.83233532934132
+"927","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","FN",35.1497005988024
+"928","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","TP",19.6407185628743
+"929","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","TOTAL",100
+"930","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","ACT_N",45.2095808383234
+"931","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","ACT_P",54.7904191616767
+"932","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","PRED_P",28.4730538922156
+"933","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","PRED_N",71.5269461077844
+"934","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","FPR",19.5364238410596
+"935","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","PPV",68.9800210304942
+"936","TrainTest","AR","IsParttimeParent","0",3340,"IsParttimeParent","Not part-time parent","TrainTest/AR","ERROR",43.9820359281437
+"937","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","TN",30.527289546716
+"938","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","FP",10.8233117483811
+"939","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","FN",33.7650323774283
+"940","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","TP",24.8843663274746
+"941","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","TOTAL",100
+"942","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","ACT_N",41.3506012950971
+"943","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","ACT_P",58.6493987049029
+"944","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","PRED_P",35.7076780758557
+"945","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","PRED_N",64.2923219241443
+"946","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","FPR",26.1744966442953
+"947","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","PPV",69.6891191709845
+"948","TrainTest","AR","Leeftijd&lt;30","1",1081,"Age < 30","below 30","TrainTest/AR","ERROR",44.5883441258094
+"949","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","TN",39.2317652136383
+"950","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","FP",7.85498489425982
+"951","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","FN",35.563228312473
+"952","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","TP",17.3500215796288
+"953","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","TOTAL",100
+"954","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","ACT_N",47.0867501078981
+"955","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","ACT_P",52.9132498921019
+"956","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","PRED_P",25.2050064738886
+"957","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","PRED_N",74.7949935261114
+"958","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","FPR",16.6819431714024
+"959","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","PPV",68.8356164383562
+"960","TrainTest","AR","Leeftijd&lt;30","0",2317,"Age < 30","above 30","TrainTest/AR","ERROR",43.4182132067328
+"961","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","TN",33.7712895377129
+"962","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","FP",10.2189781021898
+"963","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","FN",34.4525547445255
+"964","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","TP",21.5571776155718
+"965","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","TOTAL",100
+"966","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","ACT_N",43.9902676399027
+"967","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","ACT_P",56.0097323600973
+"968","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","PRED_P",31.7761557177616
+"969","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","PRED_N",68.2238442822384
+"970","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","FPR",23.2300884955752
+"971","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","PPV",67.8407350689127
+"972","TrainTest","AR","Leeftijd&lt;40","1",2055,"Age < 40","below 40","TrainTest/AR","ERROR",44.6715328467153
+"973","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","TN",40.5807892777364
+"974","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","FP",6.62695457930008
+"975","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","FN",35.8153387937453
+"976","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","TP",16.9769173492182
+"977","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","TOTAL",100
+"978","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","ACT_N",47.2077438570365
+"979","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","ACT_P",52.7922561429635
+"980","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","PRED_P",23.6038719285182
+"981","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","PRED_N",76.3961280714818
+"982","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","FPR",14.0378548895899
+"983","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","PPV",71.9242902208202
+"984","TrainTest","AR","Leeftijd&lt;40","0",1343,"Age < 40","above 40","TrainTest/AR","ERROR",42.4422933730454
+"985","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","TN",34.8175182481752
+"986","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","FP",9.74452554744525
+"987","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","FN",34.4525547445255
+"988","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","TP",20.985401459854
+"989","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","TOTAL",100
+"990","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","ACT_N",44.5620437956204
+"991","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","ACT_P",55.4379562043796
+"992","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","PRED_P",30.7299270072993
+"993","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","PRED_N",69.2700729927007
+"994","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","FPR",21.8673218673219
+"995","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","PPV",68.2897862232779
+"996","TrainTest","AR","Leeftijd&lt;50","1",2740,"Age < 50","below 50","TrainTest/AR","ERROR",44.1970802919708
+"997","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","TN",NA
+"998","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","FP",NA
+"999","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","FN",NA
+"1000","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","TP",NA
+"1001","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","TOTAL",NA
+"1002","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","ACT_N",NA
+"1003","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","ACT_P",NA
+"1004","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","PRED_P",NA
+"1005","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","PRED_N",NA
+"1006","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","FPR",NA
+"1007","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","PPV",NA
+"1008","TrainTest","AR","Leeftijd&lt;50","0",NA,"Age < 50","above 50","TrainTest/AR","ERROR",NA
+"1009","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","TN",36.6450683945284
+"1010","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","FP",8.71130309575234
+"1011","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","FN",35.4211663066955
+"1012","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","TP",19.2224622030238
+"1013","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","TOTAL",100
+"1014","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","ACT_N",45.3563714902808
+"1015","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","ACT_P",54.6436285097192
+"1016","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","PRED_P",27.9337652987761
+"1017","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","PRED_N",72.0662347012239
+"1018","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","FPR",19.2063492063492
+"1019","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","PPV",68.8144329896907
+"1020","TrainTest","AR","IsNederlands","1",2778,"Dutch","Dutch","TrainTest/AR","ERROR",44.1324694024478
+"1021","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","TN",NA
+"1022","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","FP",NA
+"1023","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","FN",NA
+"1024","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","TP",NA
+"1025","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","TOTAL",NA
+"1026","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","ACT_N",NA
+"1027","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","ACT_P",NA
+"1028","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","PRED_P",NA
+"1029","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","PRED_N",NA
+"1030","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","FPR",NA
+"1031","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","PPV",NA
+"1032","TrainTest","AR","IsNederlands","0",NA,"Dutch","Not Dutch","TrainTest/AR","ERROR",NA
+"1033","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","TN",36.4537068670994
+"1034","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","FP",8.88281516911514
+"1035","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","FN",35.1554492654595
+"1036","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","TP",19.5080286983259
+"1037","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","TOTAL",100
+"1038","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","ACT_N",45.3365220362146
+"1039","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","ACT_P",54.6634779637854
+"1040","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","PRED_P",28.3908438674411
+"1041","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","PRED_N",71.6091561325589
+"1042","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","FPR",19.5930670685757
+"1043","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","PPV",68.7123947051745
+"1044","TrainTest","AR","IsWesters","1",2927,"Western","Western","TrainTest/AR","ERROR",44.0382644345746
+"1045","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","TN",NA
+"1046","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","FP",NA
+"1047","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","FN",NA
+"1048","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","TP",NA
+"1049","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","TOTAL",NA
+"1050","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","ACT_N",NA
+"1051","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","ACT_P",NA
+"1052","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","PRED_P",NA
+"1053","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","PRED_N",NA
+"1054","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","FPR",NA
+"1055","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","PPV",NA
+"1056","TrainTest","AR","IsWesters","0",NA,"Western","Not Western","TrainTest/AR","ERROR",NA
