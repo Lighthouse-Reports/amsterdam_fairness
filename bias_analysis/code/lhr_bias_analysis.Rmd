@@ -75,6 +75,7 @@ cms_wide <- cms_raw %>%
          PRED_N = FN + TN,
          FPR = (FP/ACT_N) * 100,
          PPV = (TP/PRED_P) * 100,
+         TPR = (TP/ACT_P) * 100,
          ERROR = FP+FN) %>%
   mutate(Feature_EN = case_when(Feature == 'geslacht' ~ 'gender',
                                 Feature == 'Leeftijd&lt;30' ~ 'Age < 30',
@@ -104,7 +105,7 @@ cms_wide <- cms_raw %>%
 write.csv(cms_wide, '../output/cms_wide.csv')
 
 cms_long <- cms_wide %>%
-  pivot_longer(cols = c("TN", "FP", "FN", "TP", "TOTAL", "ACT_N", "ACT_P", "PRED_P", "PRED_N", "FPR", "PPV", "ERROR"),
+  pivot_longer(cols = c("TN", "FP", "FN", "TP", "TOTAL", "ACT_N", "ACT_P", "PRED_P", "PRED_N", "FPR", "PPV", "TPR", "ERROR"),
                names_to = 'Metric', values_to = 'Value')
 
 write.csv(cms_long, '../output/cms_long.csv')
@@ -162,7 +163,7 @@ The city itself focused pretty exclusively on the share of FPs (FP widget in the
 ```{r}
 cms_city_perspective <- cms_long %>%
   filter(stage %in% c('TrainTest/BR', 'Prepilot/BR', 'Prepilot/AR', 'Pilot/AR'), 
-         Metric %in% c('PRED_P', 'FP', 'PPV', 'FPR'),
+         Metric %in% c('PRED_P', 'FP', 'PPV', 'FPR', 'TPR'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
   mutate(order = case_when(stage == 'TrainTest/BR' ~ 1,
                            stage == 'Prepilot/BR' ~ 2,
@@ -192,7 +193,8 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
   cms_char_diff <- cms_char %>%
     dplyr::select(-Feature_Value, -group_size) %>%
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
-    mutate(Diff = .data[[feature_vals[1]]] -  .data[[feature_vals[2]]])
+    #using Amsterdam's difference op here, though not sure the ref cat is always the same
+    mutate(Diff = ((.data[[feature_vals[2]]] -  .data[[feature_vals[1]]])/.data[[feature_vals[1]]])*100)
   
   p2 <- ggplot(cms_char_diff, aes(x = reorder(stage, -order), y = Diff))+
     geom_bar(stat = 'identity', position = position_dodge(), fill = 'blue') +
@@ -200,7 +202,7 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
     labs(x = 'Dataset/Model',
          y = 'Group % difference',
          title = paste0(characteristic, ': Development of Fairness \nMetrics from the Citys Perspective'),
-         subtitle = paste0(feature_vals[1], ' - ', feature_vals[2]))+
+         subtitle = paste0(feature_vals[2], ' - ', feature_vals[1]))+
     coord_flip()
   
   print(p2)
