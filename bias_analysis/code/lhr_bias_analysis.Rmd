@@ -3,6 +3,9 @@ title: 'LHR: Amsterdam Bias Analysis'
 author: "Justin Braun"
 date: "2024-10-13"
 output: pdf_document
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -27,8 +30,8 @@ cms_raw <- read.xlsx('../input/Results_LHR/Output/20240308_CMs_LHR_SlimmeCheck.x
 feature_counts_raw <- read.xlsx('../input/Results_LHR/Output/20240308_Important_Features_Counts.xlsx')
 ```
 
+## Preprocesing
 
-## Preprocesing 
 ```{r}
 ### Confusion Matrices ###
 summary(cms_raw)
@@ -75,7 +78,9 @@ cms_wide <- cms_raw %>%
          PRED_N = FN + TN,
          FPR = (FP/ACT_N) * 100,
          PPV = (TP/PRED_P) * 100,
+         FDR = (FP/PRED_P) * 100,
          TPR = (TP/ACT_P) * 100,
+         STAT_PAR = PRED_P,
          ERROR = FP+FN) %>%
   mutate(Feature_EN = case_when(Feature == 'geslacht' ~ 'gender',
                                 Feature == 'Leeftijd&lt;30' ~ 'Age < 30',
@@ -100,12 +105,14 @@ cms_wide <- cms_raw %>%
                                       Feature == 'IsParttimeParent' & Feature_Value == 1 ~ 'Part-time parent',
                                       Feature == 'IsParttimeParent' & Feature_Value == 0 ~ 'Not part-time parent',
                                       .default = Feature_Value),
-         stage = paste0(Dataset, '/', Model))
+         stage = paste0(Dataset, '/', Model),
+         Model_EN = case_when(Model == 'BR' ~ 'Before Reweighing',
+                              Model == 'AR' ~ 'After Reweighing'))
 
 write.csv(cms_wide, '../output/cms_wide.csv')
 
 cms_long <- cms_wide %>%
-  pivot_longer(cols = c("TN", "FP", "FN", "TP", "TOTAL", "ACT_N", "ACT_P", "PRED_P", "PRED_N", "FPR", "PPV", "TPR", "ERROR"),
+  pivot_longer(cols = c("TN", "FP", "FN", "TP", "TOTAL", "ACT_N", "ACT_P", "PRED_P", "PRED_N", "FPR", "PPV", "FDR", "STAT_PAR", "TPR", "ERROR"),
                names_to = 'Metric', values_to = 'Value')
 
 write.csv(cms_long, '../output/cms_long.csv')
@@ -145,30 +152,36 @@ feature_counts <- feature_counts_raw %>%
   ungroup()
 ```
 
-
-
 ### RQ 1 Results from the perspective of the city
-This set of graph is meant to illustrate how the city saw the development of its model: 
-1. First it evaluated its model before reweighing (BR) on the test data (TrainTest)
-2. Then, it built the prepilot dataset and realized substantial bias when evaluating it against BR
-3. Next, it reweighed the model, seeing improvements on the prepilot set.
-4. Finally, it evaluated the model against the Pilot data.
 
-The city itself focused pretty exclusively on the share of FPs (FP widget in the graphs) (TODO: check that this is correct), but to show the tradeoffs involved in the process, I report several additional fairness metrics
-* FP: false positive share: FP/TOTAL -> intuition share of people who are wrongly flagged; goal is to get it as low as possible
-* FPR: false positive rate: FP/(FP+TN) -> intuition: share of people who haven't done anything wrong that are flagged; goal is to get it as low as possible
-* PPV: positive predictive rate: TP/(TP+FP) -> intuition: share of people flagged who have done something wrong; goal is to get it as high as possible
-* PRED_P: predictive parity: TP+FP/TOTAL -> intuition: share of people flagged; goal is to get it as close as possible to the actual share of people who have done something wrong which is often an unknown quantity
+This set of graph is meant to illustrate how the city saw the
+development of its model: 1. First it evaluated its model before
+reweighing (BR) on the test data (TrainTest) 2. Then, it built the
+prepilot dataset and realized substantial bias when evaluating it
+against BR 3. Next, it reweighed the model, seeing improvements on the
+prepilot set. 4. Finally, it evaluated the model against the Pilot data.
+
+The city itself focused pretty exclusively on the share of FPs (FP
+widget in the graphs) (TODO: check that this is correct), but to show
+the tradeoffs involved in the process, I report several additional
+fairness metrics \* FP: false positive share: FP/TOTAL -\> intuition
+share of people who are wrongly flagged; goal is to get it as low as
+possible \* FPR: false positive rate: FP/(FP+TN) -\> intuition: share of
+people who haven't done anything wrong that are flagged; goal is to get
+it as low as possible \* One_minus_PPV: positive predictive rate: TP/(TP+FP) -\>
+intuition: share of people flagged who have done something wrong; goal
+is to get it as high as possible \* PRED_P: predictive parity:
+TP+FP/TOTAL -\> intuition: share of people flagged; goal is to get it as
+close as possible to the actual share of people who have done something
+wrong which is often an unknown quantity
 
 ```{r}
 cms_city_perspective <- cms_long %>%
-  filter(stage %in% c('TrainTest/BR', 'Prepilot/BR', 'Prepilot/AR', 'Pilot/AR'), 
-         Metric %in% c('PRED_P', 'FP', 'PPV', 'FPR', 'TPR'),
+  filter(stage %in% c('Prepilot/BR', 'Prepilot/AR'), 
+         Metric %in% c('STAT_PAR', 'FDR', 'FP'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
-  mutate(order = case_when(stage == 'TrainTest/BR' ~ 1,
-                           stage == 'Prepilot/BR' ~ 2,
-                           stage == 'Prepilot/AR' ~ 3,
-                           stage == 'Pilot/AR' ~ 4,
+  mutate(order = case_when(stage == 'Prepilot/BR' ~ 1,
+                           stage == 'Prepilot/AR' ~ 2,
                            .default = NA))
 
 
@@ -176,8 +189,7 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
   cms_char <- cms_city_perspective %>%
     filter(Feature_EN == characteristic)
   
-  #TODO: add difference
-  p1 <- ggplot(cms_char, aes(x = reorder(stage, order), y = Value, fill = Feature_Value_EN))+
+  p1 <- ggplot(cms_char, aes(x = reorder(Model_EN, order), y = Value, fill = Feature_Value_EN))+
     geom_bar(stat = 'identity', position = position_dodge())+
     facet_grid(Metric ~., scales = "free_y")+
     labs(x = 'Dataset/Model',
@@ -194,9 +206,10 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
     dplyr::select(-Feature_Value, -group_size) %>%
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
     #using Amsterdam's difference op here, though not sure the ref cat is always the same
-    mutate(Diff = ((.data[[feature_vals[2]]] -  .data[[feature_vals[1]]])/.data[[feature_vals[1]]])*100)
+    mutate(Diff = .data[[feature_vals[2]]] -  .data[[feature_vals[1]]])
   
-  p2 <- ggplot(cms_char_diff, aes(x = reorder(stage, -order), y = Diff))+
+  #TODO: add difference as operationalized by the city reports
+  p2 <- ggplot(cms_char_diff, aes(x = reorder(Model_EN, -order), y = Diff))+
     geom_bar(stat = 'identity', position = position_dodge(), fill = 'blue') +
     facet_grid(Metric ~., scales = "free_y")+
     labs(x = 'Dataset/Model',
@@ -211,11 +224,17 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
 ```
 
 ### RQ2 Comparing before and after reweighing
-Amsterdam realized that its model exhibited bias, according to its bias definition (FP), when it deployed it in a prepilot (which really was a virtual pilot). The city decided to reweigh the training data to decrease the impact of observations on the model that drove the bias. Let's have a look at how the two models faired when tested against a more complete set of fairness metrics and datasets.
+
+Amsterdam realized that its model exhibited bias, according to its bias
+definition (FP), when it deployed it in a prepilot (which really was a
+virtual pilot). The city decided to reweigh the training data to
+decrease the impact of observations on the model that drove the bias.
+Let's have a look at how the two models faired when tested against a
+more complete set of fairness metrics and datasets.
 
 ```{r}
 cms_model_comp <- cms_long %>%
-  filter(Metric %in% c('PRED_P', 'FP', 'PPV', 'FPR'),
+  filter(Metric %in% c('PRED_P', 'FP', 'One_minus_PPV', 'FPR'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
   mutate(order = case_when(Model == 'BR' ~ 1,
                            Model == 'AR' ~ 2,
@@ -235,7 +254,7 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
     mutate(Diff = .data[[feature_vals[1]]] -  .data[[feature_vals[2]]])
   
-  p3 <- ggplot(cms_char_diff, aes(x = reorder(Model, order), y = Diff, shape = Dataset))+
+  p3 <- ggplot(cms_char_diff, aes(x = reorder(Model_EN, order), y = Diff, shape = Dataset))+
     geom_point(size = 3)+
     facet_wrap(.~Metric, scales = 'free')+
     geom_hline(yintercept = 0, color = 'red', scales = 'free_y')+
@@ -250,9 +269,15 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
 
 ```
 
-
 ### RQ3 Error rate in Pilot
-When looking at some of the graphs above, it stands stood out to me that the share of FPs jumped up substantially in the pilot. It seems useful to dig into that a bit more and find out if the rise in FP indicates a general deterioration of the model when confronted with pilot data and whether this potential deterioration is concentrated among particular groups.
+
+When looking at some of the graphs above, it stands stood out to me that
+the share of FPs jumped up substantially in the pilot. It seems useful
+to dig into that a bit more and find out if the rise in FP indicates a
+general deterioration of the model when confronted with pilot data and
+whether this potential deterioration is concentrated among particular
+groups.
+
 ```{r}
 cms_error <- cms_long %>%
   filter(stage %in% c('TrainTest/BR', 'Prepilot/BR', 'Prepilot/AR', 'Pilot/AR'),
@@ -282,9 +307,18 @@ for(characteristic in unique(cms_error$Feature_EN)){
 
 ```
 
-
 ### Feature importance
-Along with the classification, the model provided caseworkers with the three most important features used by the model to come to its determination. Loek provided us access to the most important feature by demographic group. This allows us 1) to see if caseworkers could deduce beneficiary charactsitics from the highlighted features, potentially activating their biases, and 2) whether the model used different features for different demographic groups in coming to its determination. The latter could be concerning under due process considerations.
+
+Along with the classification, the model provided caseworkers with the
+three most important features used by the model to come to its
+determination. Loek provided us access to the most important feature by
+demographic group. This allows us 1) to see if caseworkers could deduce
+beneficiary charactsitics from the highlighted features, potentially
+activating their biases, and 2) whether the model used different
+features for different demographic groups in coming to its
+determination. The latter could be concerning under due process
+considerations.
+
 ```{r}
 feature_counts_restricted <- feature_counts %>%
   filter(Feature_EN %in% c("gender", "IsFulltimeParent", "Dutch")) %>%
@@ -313,8 +347,9 @@ for(characteristic in unique(feature_counts_restricted$Feature_EN)){
 }
 ```
 
-
 ### Impossibility Theorem
-TODO: placeholder to build graphs that illustrate the impossibility theorem. Incidentally, the data above illustrates that it's really a tradeoff between predictive parity, PPV, and FPR (something i have embarrassingly often misstated). 
 
-
+TODO: placeholder to build graphs that illustrate the impossibility
+theorem. Incidentally, the data above illustrates that it's really a
+tradeoff between predictive parity, One_minus_PPV, and FPR (something i have
+embarrassingly often misstated).
