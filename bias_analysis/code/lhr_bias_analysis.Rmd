@@ -105,6 +105,23 @@ cms_wide <- cms_raw %>%
                                       Feature == 'IsParttimeParent' & Feature_Value == 1 ~ 'Part-time parent',
                                       Feature == 'IsParttimeParent' & Feature_Value == 0 ~ 'Not part-time parent',
                                       .default = Feature_Value),
+         is_privileged_group = case_when(Feature_Value == 'V' ~ 0,
+                                         Feature_Value == 'M' ~ 1,
+                                         Feature == 'Leeftijd&lt;30' & Feature_Value == 1 ~ 1,
+                                          Feature == 'Leeftijd&lt;30' & Feature_Value == 0 ~ 0,
+                                          Feature == 'Leeftijd&lt;40' & Feature_Value == 1 ~ 1,
+                                          Feature == 'Leeftijd&lt;40' & Feature_Value == 0 ~ 0,
+                                          Feature == 'Leeftijd&lt;50' & Feature_Value == 1 ~ 1,
+                                          Feature == 'Leeftijd&lt;50' & Feature_Value == 0 ~ 0,
+                                          Feature == 'IsNederlands' & Feature_Value == 1 ~ 1,
+                                          Feature == 'IsNederlands' & Feature_Value == 0 ~ 0,
+                                          Feature == 'IsWesters' & Feature_Value == 1 ~ 1,
+                                          Feature == 'IsWesters' & Feature_Value == 0 ~ 0,
+                                          Feature == 'IsFulltimeParent' & Feature_Value == 1 ~ 0,
+                                          Feature == 'IsFulltimeParent' & Feature_Value == 0 ~ 1,
+                                          Feature == 'IsParttimeParent' & Feature_Value == 1 ~ 0,
+                                          Feature == 'IsParttimeParent' & Feature_Value == 0 ~ 1,
+                                          .default = NA),
          stage = paste0(Dataset, '/', Model),
          Model_EN = case_when(Model == 'BR' ~ 'Before Reweighing',
                               Model == 'AR' ~ 'After Reweighing'))
@@ -179,7 +196,7 @@ wrong which is often an unknown quantity
 cms_city_perspective <- cms_long %>%
   filter(stage %in% c('Prepilot/BR', 'Prepilot/AR'), 
          Metric %in% c('STAT_PAR', 'FDR', 'FP'),
-         Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
+         Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent', 'Western')) %>%
   mutate(order = case_when(stage == 'Prepilot/BR' ~ 1,
                            stage == 'Prepilot/AR' ~ 2,
                            .default = NA))
@@ -196,18 +213,19 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
          title = paste0(characteristic, ': Development of Fairness Metrics from the Citys Perspective'),
          fill = characteristic)+
     theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
-  
+
   print(p1)
   ggsave(paste0('../output/rq1_p1_', characteristic, '.png'), plot = p1, width = 10, height = 8)
   
-  feature_vals <- unique(cms_char$Feature_Value_EN)
-  
+  feature_val_privileged <- unique(cms_char[cms_char$is_privileged_group == 1,]$Feature_Value_EN)[1]
+  feature_val_unprivileged <- unique(cms_char[cms_char$is_privileged_group == 0,]$Feature_Value_EN)[1]
+
   cms_char_diff <- cms_char %>%
-    dplyr::select(-Feature_Value, -group_size) %>%
+    dplyr::select(-Feature_Value, -group_size, -is_privileged_group) %>%
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
     #using Amsterdam's difference op here, though not sure the ref cat is always the same
-    mutate(Diff = .data[[feature_vals[2]]] -  .data[[feature_vals[1]]])
-  
+    mutate(Diff = 100*(.data[[feature_val_unprivileged]] -  .data[[feature_val_privileged]])/.data[[feature_val_privileged]])
+
   #TODO: add difference as operationalized by the city reports
   p2 <- ggplot(cms_char_diff, aes(x = reorder(Model_EN, -order), y = Diff))+
     geom_bar(stat = 'identity', position = position_dodge(), fill = 'blue') +
@@ -215,9 +233,9 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
     labs(x = 'Dataset/Model',
          y = 'Group % difference',
          title = paste0(characteristic, ': Development of Fairness \nMetrics from the Citys Perspective'),
-         subtitle = paste0(feature_vals[2], ' - ', feature_vals[1]))+
+         subtitle = paste0(feature_val_unprivileged, ' - ', feature_val_privileged))+
     coord_flip()
-  
+
   print(p2)
   ggsave(paste0('../output/rq1_p2_', characteristic, '.png'), plot = p2, width = 10, height = 8)
 }
@@ -234,7 +252,7 @@ more complete set of fairness metrics and datasets.
 
 ```{r}
 cms_model_comp <- cms_long %>%
-  filter(Metric %in% c('PRED_P', 'FP', 'One_minus_PPV', 'FPR'),
+  filter(Metric %in% c('PRED_P', 'FP', 'FDR', 'FPR'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
   mutate(order = case_when(Model == 'BR' ~ 1,
                            Model == 'AR' ~ 2,
@@ -243,16 +261,20 @@ cms_model_comp <- cms_long %>%
                            Model == 'AR' ~ 'After reweighing',
                            .default = NA),)
 
-for(characteristic in unique(cms_city_perspective$Feature_EN)){
+for(characteristic in unique(cms_model_comp$Feature_EN)){
   cms_char <- cms_model_comp %>%
     filter(Feature_EN == characteristic)
+  print(characteristic)
   
-  feature_vals <- unique(cms_char$Feature_Value_EN)
-  
+  feature_val_privileged <- unique(cms_char[cms_char$is_privileged_group == 1,]$Feature_Value_EN)[1]
+  feature_val_unprivileged <- unique(cms_char[cms_char$is_privileged_group == 0,]$Feature_Value_EN)[1]
+
   cms_char_diff <- cms_char %>%
-    dplyr::select(-Feature_Value, -group_size) %>%
+    dplyr::select(-Feature_Value, -group_size, -is_privileged_group) %>%
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
-    mutate(Diff = .data[[feature_vals[1]]] -  .data[[feature_vals[2]]])
+    #using Amsterdam's difference op here, though not sure the ref cat is always the same
+    mutate(Diff = 100*(.data[[feature_val_unprivileged]] -  .data[[feature_val_privileged]])/.data[[feature_val_privileged]])
+
   
   p3 <- ggplot(cms_char_diff, aes(x = reorder(Model_EN, order), y = Diff, shape = Dataset))+
     geom_point(size = 3)+
@@ -260,7 +282,7 @@ for(characteristic in unique(cms_city_perspective$Feature_EN)){
     geom_hline(yintercept = 0, color = 'red', scales = 'free_y')+
     labs(x = 'Model', y = 'Group % Difference',
          title = paste0(characteristic, ': Performance Difference by Model Type'),
-         subtitle = paste0(feature_vals[1], ' - ', feature_vals[2]))
+         subtitle = paste0(feature_val_unprivileged, ' - ', feature_val_privileged))
   
   print(p3)
   
@@ -280,12 +302,12 @@ groups.
 
 ```{r}
 cms_error <- cms_long %>%
-  filter(stage %in% c('TrainTest/BR', 'Prepilot/BR', 'Prepilot/AR', 'Pilot/AR'),
+  filter(stage %in% c('Prepilot/BR', 'Prepilot/AR', 'Pilot/BR', 'Pilot/AR'),
          Metric %in% c('FP', 'FN', 'ERROR'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
-  mutate(order = case_when(stage == 'TrainTest/BR' ~ 1,
-                           stage == 'Prepilot/BR' ~ 2,
-                           stage == 'Prepilot/AR' ~ 3,
+  mutate(order = case_when(stage == 'Prepilot/BR' ~ 1,
+                           stage == 'Prepilot/AR' ~ 2,
+                           stage == 'Pilot/BR' ~ 3,
                            stage == 'Pilot/AR' ~ 4,
                            .default = NA))
 
@@ -353,3 +375,13 @@ TODO: placeholder to build graphs that illustrate the impossibility
 theorem. Incidentally, the data above illustrates that it's really a
 tradeoff between predictive parity, One_minus_PPV, and FPR (something i have
 embarrassingly often misstated).
+
+
+### Viz
+Just a codeblock to extract data for viz or make plots prettier
+```{r}
+cms_gender <- cms_long %>%
+  filter(Feature == 'geslacht', Metric %in% c('TP', 'FP', 'TN', 'FN'), Dataset == 'Prepilot', Model == 'BR')
+  
+```
+
