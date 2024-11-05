@@ -1,0 +1,16 @@
+features:
+- days_since_last_relocation
+- deelnames_started_percentage_last_year
+- days_since_last_dienst_end
+- at_least_one_address_in_amsterdam
+- total_vermogen
+- has_partner
+- has_medebewoner
+- afspraken_no_show_count_last_year
+- avg_percentage_maatregel
+- active_address_count
+- afspraken_no_contact_count_last_year
+- applied_for_same_product_last_year
+- received_same_product_last_year
+- sum_inkomen_bruto_was_mean_imputed
+selection_method: forward_feature_selection

@@ -1,48 +1,26 @@
-import joblib
-from sklearn.pipeline import Pipeline
+import os
 import sys
-import pickle
+import joblib
 
-#Change path as needed
-sys.path.append(r'C:\Users\ta0sh\Desktop\Lighthouse\Amsterdam\Gabes_setup\Amsti_Repo\wpi_onderzoekswaardigheid_aanvraag')
 
-# Custom unpickler to remap module names
-class CustomUnpickler(pickle.Unpickler):
-    def find_class(self, module, name):
-        print(f"Trying to load {module}.{name}")
-        if module == 'wpi_uitkeringsfraude.preprocessing.custom_transformers':
-            module = 'wpi_onderzoekswaardigheid_aanvraag.preprocessing.custom_transformers'
-        print(f"Remapped to {module}.{name}")
-        return super().find_class(module, name)
 
-def load_new(file):
+def load_joblib_with_remapping(file_path):
     try:
-        with open(file, 'rb') as f:
-            return CustomUnpickler(f).load()
+        # Load the model with `joblib.load` in `mmap_mode`
+        model = joblib.load(file_path, mmap_mode='r')
+        print("File loaded successfully using joblib with mmap_mode.")
+        return model
     except ModuleNotFoundError as e:
         print(f"ModuleNotFoundError: {e}")
+    except Exception as e:
+        print(f"General loading error with joblib: {e}")
+sys.path.append(r'C:\Users\gabri\Desktop\amsti_algo\Amsti_Repo\wpi_onderzoekswaardigheid_aanvraag')
+sys.path.append(r'C:\Users\gabri\Desktop\amsti_algo\Amsti_Repo\wpi_uitkeringsfraude')
 
-# Attempt to load the model using joblib
-try:
-    model = joblib.load('20220531_model_after_reweighing.pkl')
-    print("File loaded using joblib.")
-except Exception as e:
-    print(f"Joblib load error: {e}")
-    model = load_new('20220531_model_after_reweighing.pkl')
+file_path = 'bias_analysis/input/20220523_model_used_in_prepilot.pkl'
 
-# Examining the model
-if model:
-    if isinstance(model, dict):
-        print("The unpickled object is a dictionary.")
-        if 'model' in model:
-            pipeline = model['model']
-            if isinstance(pipeline, Pipeline):
-                print("The dictionary contains an sklearn pipeline.")
-            else:
-                print("The dictionary does not contain an sklearn pipeline.")
-        else:
-            print("The dictionary does not contain a pipeline key.")
-    else:
-        print("The unpickled object is not a dictionary.")
-else:
-    print("Failed to unpickle the object.")
+
+# Load the file with joblib
+model = load_joblib_with_remapping(file_path)
+
+print(model)

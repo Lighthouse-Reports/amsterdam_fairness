@@ -1,0 +1,111 @@
+# Note that the (dis)approvals here are not complete/up-to-date, for this refer to the Excel overview of all features.
+
+categorical_cols:
+#  - geslacht  # not approved
+#  - srtverznr_verzekering  # not approved
+  - application_productnr
+
+numerical_cols:
+#  - geboortejaar  # not approved
+  - total_vermogen  # approved
+  - vermogen_unknown
+#  - doorbetalen_verzekering
+#  - aanvraag_opvoer_gap_in_days  # not approved
+  - stopzetting_count_last_year
+  - is_huiseigenaar
+  - klanttypering_schuldhulpverlening_last_year
+#  - occupation_risk_sector  # not approved
+#  - application_month_sin  # not enough data to train this properly (gets skewed by corona)
+#  - application_month_cos  # not enough data to train this properly (gets skewed by corona)
+#  - application_yday_sin  # not enough data to train this properly (gets skewed by corona)
+#  - application_yday_cos  # not enough data to train this properly (gets skewed by corona)
+#  - is_2p_partij
+  # ---- Inkomen features ----
+  - sum_inkomen_netto  # approved
+  - sum_inkomen_bruto  # approved
+  - inkomen_cat1_count
+  - inkomen_cat2_count
+  - inkomen_cat3_count
+  - inkomen_cat4_count
+  # ---- end Inkomen features ----
+  # ---- Feit features ----
+  - feit_count_last_year
+  - unique_feit_count_last_year
+  - avg_percentage_maatregel
+  - no_maatregel_count
+  # ---- end Feit features ----
+  # ---- Adres features ----
+  - active_address_count  # approved
+  - at_least_one_address_in_amsterdam  # approved
+  - days_since_last_relocation  # approved
+  - less_than_30_days_since_last_relocation
+  - active_address_unknown
+  - relocated_to_ams_last_90d
+  - relocation_count_last_year  # approved
+  - soort_adres_1
+  - soort_adres_2
+  - soort_adres_3
+  - soort_adres_9
+  # ---- end Adres features ----
+  # ---- Voorwaarde features ----
+  - voorwaarde_count_last_year  # TBD
+  - unique_voorwaarde_count_last_year  # TBD
+  # ---- end Voorwaarde features ----
+  # ---- Relatie features ----
+  - has_partner
+  - has_medebewoner  # approved
+  - has_algemene_relatie
+#  - has_child  # not approved
+  - medebewoner_count  # approved
+  - algemene_relatie_count
+#  - child_count  # not approved
+  - kostendeler_count  # approved
+  - lives_with_partner
+  - is_parttime_parent
+  - is_fulltime_parent
+  - changed_partners_last_90d
+  - separated_from_partner_last_90d
+  # ---- end Relatie features ----
+  # ---- Dienst features ----
+  - accepted_for_same_product_last_year  # approved
+  - application_accepted_count_last_year  # approved
+  - application_count_last_year  # TBD
+  - application_rejected_count_last_year  # approved
+  - applied_for_same_product_last_year  # approved
+  - days_since_last_rejected_application  # TBD
+  - days_since_last_accepted_application  # TBD
+  - days_since_last_dienst_end  # approved
+  - had_boete_last_year
+  - had_vordering_last_year
+  - has_active_dienst  # TBD
+  - productnr_131_count  # approved
+  - productnr_135_count  # TBD
+  - productnr_227_count  # TBD
+  - received_same_product_last_year  # approved
+  - rejected_for_same_product_last_year  # approved
+  # ---- end Dienst features ----
+  # ---- Proces features ----
+  - proces_count_last_year
+  - days_since_last_proces
+  - had_beheer_proces_last_year
+  - had_proces_last_year
+  # ---- end Proces features ----
+  # ---- Afspraken features ----
+#  - afspraken_count_last_year  # not approved
+  - afspraken_no_show_count_last_year
+  - afspraken_no_contact_count_last_year
+  - afspraken_geen_recht_houding_last_year
+  # ---- end Afspraken features ----
+  # ---- Deelnames features ----
+#  - deelnames_accepted_count_last_year  # not approved
+#  - deelnames_accepted_percentage_last_year  # not approved
+  - deelnames_count_last_year  # approved
+  - deelnames_ended_because_behavior_count_last_year
+  - deelnames_ended_because_work_or_education_count_last_year
+  - deelnames_ended_early_count_last_year
+  - deelnames_ended_early_percentage_last_year
+  - deelnames_not_finished_count_last_year
+  - deelnames_not_finished_percentage_last_year
+  - deelnames_started_count_last_year  # approved
+  - deelnames_started_percentage_last_year  # approved
+#   ---- end Deelnames features ----
