@@ -49,18 +49,18 @@ cms_raw <- cms_raw %>%
 cms_train <- cms_raw %>%
   filter(Dataset == 'TrainingTrain') %>%
   rename(Value_Train = Value) %>%
-  select(-Dataset)
+  dplyr::select(-Dataset)
 
 cms_test <- cms_raw %>%
   filter(Dataset == 'TrainingTest') %>%
   rename(Value_Test = Value) %>%
-  select(-Dataset)
+  dplyr::select(-Dataset)
 
 cms_train_test <- cms_train %>%
   left_join(cms_test, by = c('Model', 'Feature', 'Feature_Value', 'Metric')) %>%
   mutate(Value = Value_Train + Value_Test,
          Dataset = 'TrainTest') %>%
-  select(-Value_Train, -Value_Test)
+  dplyr::select(-Value_Train, -Value_Test)
 
 cms_wide <- cms_raw %>%
   filter(!(Dataset %in% c('TrainingTrain', 'TrainingTest'))) %>%
@@ -134,6 +134,15 @@ cms_long <- cms_wide %>%
 
 write.csv(cms_long, '../output/cms_long.csv')
 
+cms_amsti <- cms_wide %>%
+  dplyr::select('Dataset', 'Model', 'Model_EN', 'Feature_EN', 'is_privileged_group', 'Feature_Value_EN', 'group_size', 'FP', 'FPR', 'FDR', 'PRED_P') %>%
+  mutate(is_privileged_group = ifelse(is_privileged_group ==1, 'privileged', 'unprivileged')) %>%
+  pivot_wider(names_from = 'is_privileged_group', values_from =  c('Feature_Value_EN', 'group_size', 'FP', 'FPR', 'FDR', 'PRED_P')) %>%
+  mutate(FP_amsti_diff = 100*((FP_unprivileged-FP_privileged)/FP_privileged),
+         FPR_amsti_diff = 100*((FPR_unprivileged-FPR_privileged)/FPR_privileged),
+         FDR_amsti_diff = 100*((FDR_unprivileged-FPR_privileged)/FDR_privileged),
+         PRED_P_amsti_diff = 100*((PRED_P_unprivileged-PRED_P_privileged)/PRED_P_privileged))
+write.csv(cms_amsti, '../output/cms_amsti.csv')
 ```
 
 ```{r}
@@ -201,8 +210,8 @@ cms_city_perspective <- cms_long %>%
                            stage == 'Prepilot/AR' ~ 2,
                            .default = NA))
 
-
-for(characteristic in unique(cms_city_perspective$Feature_EN)){
+cms_char_diff <- data.frame()
+for(characteristic in c('Dutch')){
   cms_char <- cms_city_perspective %>%
     filter(Feature_EN == characteristic)
   
