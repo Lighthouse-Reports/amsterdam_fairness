@@ -211,7 +211,7 @@ cms_city_perspective <- cms_long %>%
                            .default = NA))
 
 cms_char_diff <- data.frame()
-for(characteristic in c('Dutch')){
+for(characteristic in c('Dutch', 'gender', 'IsFulltimeParent')){
   cms_char <- cms_city_perspective %>%
     filter(Feature_EN == characteristic)
   
@@ -233,7 +233,11 @@ for(characteristic in c('Dutch')){
     dplyr::select(-Feature_Value, -group_size, -is_privileged_group) %>%
     pivot_wider(names_from = 'Feature_Value_EN', values_from = 'Value') %>%
     #using Amsterdam's difference op here, though not sure the ref cat is always the same
-    mutate(Diff = 100*(.data[[feature_val_unprivileged]] -  .data[[feature_val_privileged]])/.data[[feature_val_privileged]])
+    mutate(Diff = 100*(.data[[feature_val_unprivileged]] -  .data[[feature_val_privileged]])/.data[[feature_val_privileged]],
+           Metric = case_when(Metric == 'FP' ~ 'False Positive Share',
+                              Metric == 'FDR' ~ 'False Discovery Rate',
+                              Metric == 'STAT_PAR' ~ 'Statistical Parity',
+                              .default = NA))
 
   #TODO: add difference as operationalized by the city reports
   p2 <- ggplot(cms_char_diff, aes(x = reorder(Model_EN, -order), y = Diff))+
@@ -247,6 +251,8 @@ for(characteristic in c('Dutch')){
 
   print(p2)
   ggsave(paste0('../output/rq1_p2_', characteristic, '.png'), plot = p2, width = 10, height = 8)
+  
+  write.csv(cms_char_diff, paste0('../output/fairness_definition_cmomp_', characteristic, '.csv'))
 }
 ```
 
@@ -311,16 +317,14 @@ groups.
 
 ```{r}
 cms_error <- cms_long %>%
-  filter(stage %in% c('Prepilot/BR', 'Prepilot/AR', 'Pilot/BR', 'Pilot/AR'),
+  filter(stage %in% c( 'Prepilot/AR', 'Pilot/AR'),
          Metric %in% c('FP', 'FN', 'ERROR'),
          Feature_EN %in% c('gender', 'Age < 30', 'Age < 50', 'Dutch', 'IsFulltimeParent')) %>%
-  mutate(order = case_when(stage == 'Prepilot/BR' ~ 1,
-                           stage == 'Prepilot/AR' ~ 2,
-                           stage == 'Pilot/BR' ~ 3,
-                           stage == 'Pilot/AR' ~ 4,
+  mutate(order = case_when(stage == 'Prepilot/AR' ~ 1,
+                           stage == 'Pilot/AR' ~ 1,
                            .default = NA))
 
-for(characteristic in unique(cms_error$Feature_EN)){
+for(characteristic in c('Dutch')){
   cms_char <- cms_error %>%
     filter(Feature_EN == characteristic)
   
@@ -334,6 +338,12 @@ for(characteristic in unique(cms_error$Feature_EN)){
   print(p4)
   
   ggsave(paste0('../output/rq3_p4_error_', characteristic, '.png'), plot = p4, width = 10, height = 8)
+  
+  cms_char <- cms_char %>%
+    mutate(Metric = case_when(Metric == 'FP' ~ 'False Positives',
+                              Metric == 'FN' ~ 'False Negatives',
+                              Metric == 'ERROR' ~ 'Overall Error Rate'))
+  write.csv(cms_char, paste0('../output/', characteristic ,'_error_rate.csv'))
 }
 
 ```

@@ -1,0 +1,7 @@
+"","Dataset","Model","Feature","Feature_EN","stage","Model_EN","Metric","order","M","F","Diff"
+"1","Prepilot","BR","geslacht","gender","Prepilot/BR","Before Reweighing","False Positive Share",1,15.8730158730159,13.2142857142857,-16.75
+"2","Prepilot","BR","geslacht","gender","Prepilot/BR","Before Reweighing","False Discovery Rate",1,38.86925795053,34.1013824884793,-12.2664432341852
+"3","Prepilot","BR","geslacht","gender","Prepilot/BR","Before Reweighing","Statistical Parity",1,40.8369408369408,38.75,-5.11042402826854
+"4","Prepilot","AR","geslacht","gender","Prepilot/AR","After Reweighing","False Positive Share",2,11.8326118326118,9.28571428571429,-21.5243902439024
+"5","Prepilot","AR","geslacht","gender","Prepilot/AR","After Reweighing","False Discovery Rate",2,37.7880184331797,30.5882352941176,-19.0530846484935
+"6","Prepilot","AR","geslacht","gender","Prepilot/AR","After Reweighing","Statistical Parity",2,31.3131313131313,30.3571428571429,-3.05299539170506

@@ -1,0 +1,7 @@
+"","Dataset","Model","Feature","Feature_EN","stage","Model_EN","Metric","order","Full-time parent","Not full-time parent","Diff"
+"1","Prepilot","BR","IsFulltimeParent","IsFulltimeParent","Prepilot/BR","Before Reweighing","False Positive Share",1,15.6756756756757,14.5794392523364,7.51905751905752
+"2","Prepilot","BR","IsFulltimeParent","IsFulltimeParent","Prepilot/BR","Before Reweighing","False Discovery Rate",1,43.9393939393939,35.7798165137615,22.8049728049728
+"3","Prepilot","BR","IsFulltimeParent","IsFulltimeParent","Prepilot/BR","Before Reweighing","Statistical Parity",1,35.6756756756757,40.7476635514019,-12.4473096950161
+"4","Prepilot","AR","IsFulltimeParent","IsFulltimeParent","Prepilot/AR","After Reweighing","False Positive Share",2,12.4324324324324,10.4672897196262,18.7741312741313
+"5","Prepilot","AR","IsFulltimeParent","IsFulltimeParent","Prepilot/AR","After Reweighing","False Discovery Rate",2,43.3962264150943,33.3333333333333,30.188679245283
+"6","Prepilot","AR","IsFulltimeParent","IsFulltimeParent","Prepilot/AR","After Reweighing","Statistical Parity",2,28.6486486486487,31.4018691588785,-8.76769626769626

@@ -1,0 +1,16 @@
+Description,Feature importance ranked,Possible proxy
+Days since last moved house,2,Yes
+Days since last shift,5,Yes
+Received benefit in previous year?,7,Yes
+Applied for benefit in previous year?,9,Yes
+Active addresses,14,Yes
+Percentage participation in welfare schemes in previous year,1,No
+No-show appointments in previous year,13,No
+Sum of assets,4,No
+Co-occupants?,6,No
+Average ‘points docked’ for violating benefits rules,8,No
+Average of gross income,10,No
+Address in Amsterdam?,11,No
+No-contact or no-reply appointments in previous year,3,No
+Sum of gross income,15,No
+Single or partnered?,12,Maybe
