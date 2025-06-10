@@ -2,6 +2,7 @@
 This repository includes our analysis into Amsterdam's Slimme Check algorithm. Slimme Check was an attempt by the city of Amsterdam to predict which welfare applications were likely to be fraudulent or contain errors. Stories based on this analysis have been published by 
 - [Trouw](https://www.trouw.nl/verdieping/amsterdam-wilde-met-ai-de-bijstand-eerlijker-en-efficienter-maken-het-liep-anders~b2890374/)
 - [MIT Tech]()
+  
 We also published an extensive [methdology]() on our website.
 
 # Repo Overview
@@ -13,5 +14,5 @@ The script we used for the analysis is called [bias_analysis](https://github.com
 ## TODO: model analysis
 
 ## City code
-The city also shared the [repo](https://github.com/Lighthouse-Reports/amsterdam_fairness/tree/main/wpi_uitkeringsfraude) they used for model [training](https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/wpi_onderzoekswaardigheid_aanvraag/entrypoints/train_model.py) and scoring[https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/wpi_onderzoekswaardigheid_aanvraag/entrypoints/score_applications.py]. This repo also contains the city's extensive bias evaluation pipeline.
+The city also shared the [repo](https://github.com/Lighthouse-Reports/amsterdam_fairness/tree/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe) they used for model [training]([https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/wpi_onderzoekswaardigheid_aanvraag/entrypoints/train_model.py](https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/wpi_onderzoekswaardigheid_aanvraag/entrypoints/train_model.py)) and [scoring](https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/wpi_onderzoekswaardigheid_aanvraag/entrypoints/score_applications.py). This repo also contains the city's extensive [bias evaluation pipeline](https://github.com/Lighthouse-Reports/amsterdam_fairness/tree/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/analysis).
 Since we do not have access to individual level data, we could not test the code in this repo ourselves.
