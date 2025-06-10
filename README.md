@@ -11,6 +11,6 @@ The script we used for the analysis is called [bias_analysis](https://github.com
 
 ## TODO: model analysis
 
-## The City's code: wpi_uitkeringsfraude
+## The city's code: wpi_uitkeringsfraude
 The city also shared the [repo](https://github.com/Lighthouse-Reports/amsterdam_fairness/tree/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe) they used for model [training]([https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/wpi_onderzoekswaardigheid_aanvraag/entrypoints/train_model.py](https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/wpi_onderzoekswaardigheid_aanvraag/entrypoints/train_model.py)) and [scoring](https://github.com/Lighthouse-Reports/amsterdam_fairness/blob/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/wpi_onderzoekswaardigheid_aanvraag/entrypoints/score_applications.py). This repo also contains the city's extensive [bias evaluation pipeline](https://github.com/Lighthouse-Reports/amsterdam_fairness/tree/main/wpi_uitkeringsfraude/Repo%20wpi-onderzoekswaardigheid-aanvraag%20-%20based%20on%20dev%20branch%20commit%20069435abe/analysis).
 Since we do not have access to individual level data, we could not test the code in this repo ourselves.
