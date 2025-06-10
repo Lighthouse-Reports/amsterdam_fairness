@@ -1,0 +1,59 @@
+parameters:
+- name: serviceConnectionName
+  displayName: Name of service connection to connect to AML
+  type: string
+- name: AMLModelName
+  displayName: Name of the AML model to be downloaded
+  type: string
+- name: AMLModelVersion
+  displayName: Version of the AML model to be downloaded
+  type: string
+- name: AMLWorkspaceName
+  displayName: AML workspace name
+  type: string
+- name: AMLResourceGroup
+  displayName: AML resource group
+  type: string
+- name: AMLSubscriptionID
+  displayName: AML subscription ID
+  type: string
+- name: downloadedModelDirectory
+  displayName: Directory to download model to
+  type: string
+- name: publishedModelArtifactsName
+  displayName: Name under which to publish the model artifacts for use within the pipeline
+  type: string
+
+
+jobs:
+  - template: templates/download-aml-model.yml
+    parameters:
+      serviceConnectionName: ${{ parameters.serviceConnectionName }}
+      AMLModelName: ${{ parameters.AMLModelName }}
+      AMLModelVersion: ${{ parameters.AMLModelVersion }}
+      AMLWorkspaceName: ${{ parameters.AMLWorkspaceName }}
+      AMLResourceGroup: ${{ parameters.AMLResourceGroup }}
+      AMLSubscriptionID: ${{ parameters.AMLSubscriptionID }}
+      downloadedModelDirectory: ${{ parameters.downloadedModelDirectory }}
+      publishedModelArtifactsName: ${{ parameters.publishedModelArtifactsName }}
+
+  - job: GetProjectVersion
+    displayName: Get project version number
+    pool:
+      vmImage: ubuntu-20.04
+    steps:
+      - task: AzureCLI@2
+        name: getProjectVersion
+        displayName: Get project version number
+        continueOnError: false
+        inputs:
+          azureSubscription: ${{ parameters.serviceConnectionName }}
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            PROJECT_VERSION=$(grep -m 1 "version =" pyproject.toml | tr -s ' ' | tr -d '"' | tr -d "'" | cut -d' ' -f3)
+            echo "Project version:" $PROJECT_VERSION
+            MAJOR_VERSION="${PROJECT_VERSION:0:1}"
+            echo "Major version:" $MAJOR_VERSION
+
+            echo "##vso[task.setvariable variable=PROJECT_VERSION;isOutput=true]$PROJECT_VERSION"

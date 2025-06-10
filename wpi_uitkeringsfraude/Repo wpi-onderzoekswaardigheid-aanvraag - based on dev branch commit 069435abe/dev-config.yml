@@ -1,0 +1,127 @@
+connections:
+# Configuration of connections.
+# Each connection specifies a `type`. Currently supported types are `azure` for retrieving data from the AML storage
+# account, `azure_api` for retrieving data from the Datateam Sociaal APIs, and (on the VAO) `postgres` for retrieving
+# data from the PostgreSQL database. Depending on the connection additional fields are supported
+# and/or required.
+  azure_api:
+    type: rest
+  azure_blob_storage:
+    type: azure
+
+# The name of the connection that is used if no connection is configured for a dataset.
+# The connection is also used for datasets that exist, but no entry exists at all in
+# `datasets` below.
+default_connection: azure_blob_storage
+
+# Note: Caching is not tested well and may cause bugs!
+cache:
+  bulk_fetch_cache:
+    # The bulk fetch cache caches the result of bulk queries, i.e., for queries that
+    # query for several (possibly 10s of thousands) IDs at once.
+    # In the current implementation, the cache is never invalidated.
+    # Very useful during development. Recommended to turn off in production environments.
+
+    # Whether to use a persistent fetch cache.
+    # Recommended setting for production environments: false.
+    # Default: false
+    enable: false
+
+    # Directory where to persist the cache on disk.
+    # Several files will be created in this directory.
+    # Default: .dscache
+    directory: .dscache
+
+    # How many queries to cache at most.
+    # Since this can cache entire datasets keep the number rather low. Default: 3
+    maxsize: 3
+
+  single_fetch_cache:
+    # This cache is used to cache the results for queries by exactly one id.
+    # It is useful for production environments and development alike.
+    # The cache expires after a certain amount of time.
+
+    # Seconds after which to expire cache entries. Default: 3600 (one hour)
+    ttl: 3600
+
+    # How many queries to cache at most.
+    # These are single results and hence usually small. It should be able to handle
+    # quite a few. Reduce if memory usage becomes an issue. Default: 1
+    maxsize: 1
+
+logging:
+  loglevel_own: "DEBUG"  # Override loglevel for packages defined in `own_packages`.
+  own_packages:
+      - "__main__"
+      - "wpi_onderzoekswaardigheid_aanvraag"
+      - "fraude_preventie"
+      - "bias-collection"
+      - "amla-toolkit"
+  basic_config:
+    # Log config as arguments to `logging.basicConfig`.
+    level: INFO
+    format: "%(asctime)s|%(levelname)-8s|%(name)s|%(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  extra_loglevels:
+    azure.identity: WARNING
+
+model:
+  # Type of algorithm to train. Options: 'RF' for random forest, 'XGB' for
+  # gradient boosting, 'EBM' for explainable boosting machine.
+  algorithm: "EBM"
+  # List of handling types (= how the application went through the process, who
+  # "handled" it) to include in the dataset; each string should match a boolean
+  # column in the dataframe indicating if the application was of that type.
+  handling_types: ["is_onderzoek_hh"]
+  # Product numbers that the model is used for. This is used to filter the
+  # dataset and some of the features.
+  core_product_numbers:
+      - 131  # WWb/LO
+      - 135  # WWb/EV
+      - 227  # Krediethypotheek
+  # Feature selection option: all_features, selected_features, cut_fimp, forward_feature_selection
+  feature_selection: "selected_features"
+  # Threshold on cumulative feature importance above which to cut features if
+  # specified as feature selection method (between 0 and 1).
+  fimp_threshold: 0.95
+  # If true, register the model on Azure Machine Learning after training.
+  register_model: true
+
+data_api:
+  url: "{DATA_API_URL}"
+
+flags:
+  # Flags to toggle certain functionality, see wpi_onderzoekswaardigheid_aanvraag.settings.flags.
+  - NONE
+#  - DEVELOPMENT_MODE
+#  - GRIDSEARCH
+#  - SAVE_PARAMS
+#  - BIAS
+#  - REWEIGH
+
+# Used when running bias analysis integrated with model training.
+#sensitive_features: {
+#    # [start, end, split, step] or [[privileged values], [unprivileged values]]
+#    # Examples:
+#    # relocation_count_last_year: [0, 18, 3, 1],
+#    # active_address_count: [[0, 1, 2], [6, 3, 4, 5]],
+#  }
+
+#reweigh_features: {
+#    # Accepted formats for the groups: [start, end, split, step] or [[privileged values], [unprivileged values]]
+#    # `drop_after_use` indicates if the feature should be dropped after using for reweighing, or be kept in the model training phase.
+#
+#    # This split represents western vs. non-western nationalities.
+#    nationaliteit: {
+#      groups: [
+#        [ 1, 27, 28, 42, 43, 44, 46, 52, 53, 54, 55, 56, 57, 59, 60, 61, 62, 63, 64, 67, 68, 69, 70, 71, 72, 73, 74, 77, 80, 81, 83, 204, 223, 250, 308, 317, 400, 402, 437 ],
+#        [ 2, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 45, 48, 50, 58, 65, 84, 85, 86, 87, 88, 100, 101, 104,
+#          105, 106, 110, 111, 112, 114, 117, 118, 119, 120, 121, 122, 123, 126, 127, 129, 131, 133, 134, 135, 136,
+#          137, 138, 140, 142, 143, 145, 147, 148, 149, 151, 152, 154, 155, 202, 205, 206, 207, 208, 211, 212, 213,
+#          214, 216, 218, 219, 222, 252, 253, 254, 255, 256, 259, 261, 262, 263, 264, 265, 300, 301, 302, 305, 306,
+#          307, 309, 310, 312, 313, 314, 315, 316, 319, 320, 322, 325, 326, 328, 329, 331, 334, 335, 336, 337, 338,
+#          339, 341, 342, 345, 429, 444, 447, 450, 451, 454, 455, 499, 500 ]
+#      ],
+#      drop_after_use: true
+#    }
+#}

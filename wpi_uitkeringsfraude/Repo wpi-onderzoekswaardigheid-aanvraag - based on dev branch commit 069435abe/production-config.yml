@@ -1,0 +1,98 @@
+connections:
+# Configuration of connections.
+# Each connection specifies a `type`. Currently supported types are `azure` for retrieving data from the AML storage
+# account, `azure_api` for retrieving data from the Datateam Sociaal APIs, and (on the VAO) `postgres` for retrieving
+# data from the PostgreSQL database. Depending on the connection additional fields are supported
+# and/or required.
+  azure_api:
+    type: rest
+  azure_blob_storage:
+    type: azure
+
+# The name of the connection that is used if no connection is configured for a dataset.
+# The connection is also used for datasets that exist, but no entry exists at all in
+# `datasets` below.
+default_connection: azure_api
+
+# Note: Caching is not tested well and may cause bugs!
+cache:
+  bulk_fetch_cache:
+    # The bulk fetch cache caches the result of bulk queries, i.e., for queries that
+    # query for several (possibly 10s of thousands) IDs at once.
+    # In the current implementation, the cache is never invalidated.
+    # Very useful during development. Recommended to turn off in production environments.
+
+    # Whether to use a persistent fetch cache.
+    # Recommended setting for production environments: false.
+    # Default: false
+    enable: false
+
+    # Directory where to persist the cache on disk.
+    # Several files will be created in this directory.
+    # Default: .dscache
+    directory: .dscache
+
+    # How many queries to cache at most.
+    # Since this can cache entire datasets keep the number rather low. Default: 3
+    maxsize: 3
+
+  single_fetch_cache:
+    # This cache is used to cache the results for queries by exactly one id.
+    # It is useful for production environments and development alike.
+    # The cache expires after a certain amount of time.
+
+    # Seconds after which to expire cache entries. Default: 3600 (one hour)
+    ttl: 3600
+
+    # How many queries to cache at most.
+    # These are single results and hence usually small. It should be able to handle
+    # quite a few. Reduce if memory usage becomes an issue. Default: 1
+    maxsize: 1
+
+logging:
+  loglevel_own: "INFO"  # Override loglevel for packages defined in `own_packages`.
+  own_packages:
+      - "__main__"
+      - "wpi_onderzoekswaardigheid_aanvraag"
+      - "fraude_preventie"
+      - "bias-collection"
+      - "amla-toolkit"
+  basic_config:
+    # Log config as arguments to `logging.basicConfig`.
+    level: INFO
+    format: "%(asctime)s|%(levelname)-8s|%(name)s|%(message)s"
+    datefmt: "%Y-%m-%d %H:%M:%S"
+  extra_loglevels:
+    azure.identity: WARNING
+
+model:
+  # Type of algorithm to train. Options: 'RF' for random forest, 'XGB' for
+  # gradient boosting, 'EBM' for explainable boosting machine.
+  algorithm: "EBM"
+  # List of handling types (= how the application went through the process, who
+  # "handled" it) to include in the dataset; each string should match a boolean
+  # column in the dataframe indicating if the application was of that type.
+  handling_types: ["is_onderzoek_hh"]
+  # Product numbers that the model is used for. This is used to filter the
+  # dataset and some of the features.
+  core_product_numbers:
+      - 131  # WWb/LO
+      - 135  # WWb/EV
+      - 227  # Krediethypotheek
+  # Feature selection option: all_features, selected_features, cut_fimp, forward_feature_selection
+  feature_selection: "selected_features"
+  # Threshold on cumulative feature importance above which to cut features if
+  # specified as feature selection method (between 0 and 1).
+  fimp_threshold: 0.95
+  # If true, register the model on Azure Machine Learning after training.
+  register_model: true
+
+key_vault_name: "{KEY_VAULT_NAME}"
+
+data_api:
+  url: "{DATA_API_URL}"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  

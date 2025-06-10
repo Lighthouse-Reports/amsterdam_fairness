@@ -1,0 +1,242 @@
+trigger:
+  batch: true
+  branches:
+    include:
+      - refs/heads/master
+      - refs/heads/dev
+      - refs/heads/feature/*
+      - refs/heads/release/*
+  paths:
+    exclude:
+    - analysis
+    - info
+    - scripts
+    - README.md
+
+pool:
+  vmImage: ubuntu-20.04
+
+parameters:
+  - name: debug
+    type: boolean
+    default: true
+  - name: AMLModelVersion
+    displayName: Version of model in AML
+    type: string
+    default: 31
+
+resources:
+  repositories:
+    - repository: self
+    - repository: BB-ContainerRegistry
+      type: git
+      name: CCC-Public/BB-ContainerRegistry
+      ref: refs/tags/1.0.3
+
+variables:
+  dockerImageName: wpi-model
+  dockerImageTag: latest
+
+  # Relating to connection to AML for downloading the model.
+  AMLSubscriptionID: 'b5d1b0e0-1ce4-40f9-87d5-cf3fde7a7b14'
+  AMLResourceGroup: 'aao-aml-p-rg'
+  AMLWorkspaceName: 'aao-weu-aml-p-xnjyjutinwfyu'
+  AMLModelName: 'wpi_model'
+  downloadedModelDirectory: 'model_artifacts'  # Warning: Changing this will require changes in the model's scorer code.
+  publishedModelArtifactsName: 'downloadedArtifacts'
+
+  ${{ if eq( variables['Build.SourceBranch'], 'refs/heads/master' ) }}:
+    dtapName: prd
+    dtapLetter: p
+    appService: wpi-model-weu-app-p-linux2-ssurmyydh75pk
+    containerRegistry: wpiweuacrpssurmyydh75pk
+
+  ${{ elseif eq( variables['Build.SourceBranch'], 'refs/heads/dev' ) }}:
+    dtapName: acc
+    dtapLetter: a
+    appService: wpi-model-weu-app-a-linux2-57x7ggv2bswjc
+    containerRegistry: wpiweuacra57x7ggv2bswjc
+
+  ${{ else }}:
+    dtapName: test
+    dtapLetter: t
+    appService: wpi-model-weu-app-t-linux2-i7iso2m3woeyw
+    containerRegistry: wpiweuacrti7iso2m3woeyw
+
+
+stages:
+  - stage: Prerequisites
+    displayName: "Collect all prerequisites"
+    jobs:
+      - template: "prerequisites-pipeline.yml"
+        parameters:
+          serviceConnectionName: "ARM-CCC-DASO-${{ variables.dtapName }}-01"
+          AMLModelName: ${{ variables.AMLModelName }}
+          AMLModelVersion: ${{ parameters.AMLModelVersion }}
+          AMLWorkspaceName: ${{ variables.AMLWorkspaceName }}
+          AMLResourceGroup: ${{ variables.AMLResourceGroup }}
+          AMLSubscriptionID: ${{ variables.AMLSubscriptionID }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+    
+  - stage: Prebuild
+    displayName: "Checks and tests prior to build"
+    dependsOn: Prerequisites
+    jobs:
+      - template: "prebuild-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+
+  - stage: Build_test
+    displayName: "[t] Build and publish container to test"
+    dependsOn: Prerequisites
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 't' ),
+        ne( variables['Build.Reason'], 'PullRequest' )
+      )
+    variables:
+    - name: projectVersion
+      value: $[ stageDependencies.Prerequisites.GetProjectVersion.outputs['getProjectVersion.PROJECT_VERSION'] ]
+    jobs:
+      - template: "build-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          AMLModelName: ${{ variables.AMLModelName }}
+          AMLModelVersion: ${{ parameters.AMLModelVersion }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+
+  - stage: Deploy_test
+    displayName: "[t] Deploy model to test"
+    dependsOn: Build_test
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 't' ),
+        ne( variables['Build.Reason'], 'PullRequest' )
+      )
+    jobs:
+      - template: "deploy-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          appService: ${{ variables.appService }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          deploymentEnv: AA-deploy
+
+  - stage: Build_acc
+    displayName: "[a] Build and publish container to acc"
+    dependsOn: 
+      - Prerequisites
+      - Prebuild
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 'a' )
+      )
+    variables:
+    - name: projectVersion
+      value: $[ stageDependencies.Prerequisites.GetProjectVersion.outputs['getProjectVersion.PROJECT_VERSION'] ]
+    jobs:
+      - template: "build-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          AMLModelName: ${{ variables.AMLModelName }}
+          AMLModelVersion: ${{ parameters.AMLModelVersion }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+
+  - stage: Deploy_acc
+    displayName: "[a] Deploy model to acc"
+    dependsOn: Build_acc
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 'a' )
+      )
+    jobs:
+      - template: "deploy-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          appService: ${{ variables.appService }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          deploymentEnv: AA-deploy
+
+  - stage: Build_prd
+    displayName: "[p] Build and publish container to prd"
+    dependsOn: 
+      - Prerequisites
+      - Prebuild
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 'p' )
+      )
+    variables:
+    - name: projectVersion
+      value: $[ stageDependencies.Prerequisites.GetProjectVersion.outputs['getProjectVersion.PROJECT_VERSION'] ]
+    jobs:
+      - template: "build-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          AMLModelName: ${{ variables.AMLModelName }}
+          AMLModelVersion: ${{ parameters.AMLModelVersion }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+
+  - stage: Deploy_prd
+    displayName: "[p] Deploy model to prd"
+    dependsOn: 
+      - Prerequisites
+      - Build_prd
+    condition: |
+      and
+      (
+        succeeded(),
+        eq( variables.dtapLetter, 'p' )
+      )
+    variables:
+    - name: projectVersion
+      value: $[ stageDependencies.Prerequisites.GetProjectVersion.outputs['getProjectVersion.PROJECT_VERSION'] ]
+    jobs:
+      - template: "deploy-pipeline.yml"
+        parameters:
+          dtapName: ${{ variables.dtapName }}
+          dtapLetter: ${{ variables.dtapLetter }}
+          appService: ${{ variables.appService }}
+          containerRegistry: ${{ variables.containerRegistry }}
+          dockerImageName: ${{ variables.dockerImageName }}
+          dockerImageTag: ${{ variables.dockerImageTag }}
+          downloadedModelDirectory: ${{ variables.downloadedModelDirectory }}
+          publishedModelArtifactsName: ${{ variables.publishedModelArtifactsName }}
+          deploymentEnv: AA-deploy-with-approval

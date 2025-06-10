@@ -1,0 +1,51 @@
+trigger: none
+
+parameters:
+  - name: environment
+    type: string
+    values:
+    - acc
+    - prd
+
+variables:
+  dockerImageName: wpi-model
+  dockerImageTag: latest
+
+  ${{ if eq( parameters.environment, 'prd' ) }}:
+    appService: wpi-model-weu-app-p-linux2-ssurmyydh75pk
+    serviceConnection: "ARM-CCC-DASO-prd-01"
+    resourceGroup: "daso-infra-p-rg"
+    containerRegistry: wpiweuacrpssurmyydh75pk
+    deploymentEnv: AA-deploy
+
+  ${{ if eq( parameters.environment, 'acc' ) }}:
+    appService: wpi-model-weu-app-a-linux2-57x7ggv2bswjc
+    serviceConnection: "ARM-CCC-DASO-acc-01"
+    resourceGroup: "daso-infra-a-rg"
+    containerRegistry: wpiweuacra57x7ggv2bswjc
+    deploymentEnv: AA-deploy
+
+
+stages:
+  - stage: Restart
+    displayName: "Restart app service"
+    jobs:
+    - deployment: setTeamAAAppServiceImg
+      displayName: "Set team AA app service to correct Docker image and restart it"
+      environment: ${{ variables.deploymentEnv }}
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - task: AzureCLI@2
+              displayName: Set team AA app service to correct Docker image and restart it
+              inputs:
+                azureSubscription: ${{ variables.serviceConnection }}
+                scriptType: 'bash'
+                scriptLocation: 'inlineScript'
+                inlineScript: |
+                  echo "az webapp config container set --name ${{ variables.appService }} --resource-group ${{ variables.resourceGroup }} --docker-custom-image-name ${{ variables.containerRegistry }}.azurecr.io/${{ variables.dockerImageName }}:${{ variables.dockerImageTag }}"
+                  az webapp config container set --name ${{ variables.appService }} --resource-group ${{ variables.resourceGroup }} --docker-custom-image-name ${{ variables.containerRegistry }}.azurecr.io/${{ variables.dockerImageName }}:${{ variables.dockerImageTag }}
+                  
+                  echo "az webapp restart --name ${{ variables.appService }} --resource-group ${{ variables.resourceGroup }}"
+                  az webapp restart --name ${{ variables.appService }} --resource-group ${{ variables.resourceGroup }}

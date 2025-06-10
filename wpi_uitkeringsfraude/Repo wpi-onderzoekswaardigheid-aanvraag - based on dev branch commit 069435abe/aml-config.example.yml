@@ -1,0 +1,32 @@
+connections:
+  datateam_sociaal:
+    subscription_id: ""
+    resource_group: ""
+  analyse_services:
+    ont:
+      subscription_id: ""
+      resource_group: ""
+      storage_account_name: ""
+      aml_workspace_name: ""
+      tenant_id: ""
+      vnet_resourcegroup_name: ""
+      vnet_name: ""
+      user_assigned_identity_id: ""
+    prd:
+      subscription_id: ""
+      resource_group: ""
+      storage_account_name: ""
+      aml_workspace_name: ""
+      tenant_id: ""
+      vnet_resourcegroup_name: ""
+      vnet_name: ""
+      user_assigned_identity_id: ""
+
+experiment_details:
+  compute_name: ""
+  env_name: ""
+  container_name: ""
+  datastore_name: ""
+  exp_name: ""
+  pat_token: {PAT_TOKEN}
+  src_dir: "."

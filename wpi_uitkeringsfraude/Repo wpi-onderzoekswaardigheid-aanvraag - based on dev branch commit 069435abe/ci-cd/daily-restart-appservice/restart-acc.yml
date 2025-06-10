@@ -1,0 +1,22 @@
+trigger: none
+
+schedules:
+- cron: 0 0 * * *
+  displayName: Midnight daily
+  always: true
+  branches:
+    include:
+      - dev
+
+pool:
+  vmImage: ubuntu-20.04
+
+parameters:
+  - name: environment
+    type: string
+    default: acc
+
+extends:
+  template: daily-restart-appservice.yml
+  parameters: 
+    environment: ${{ parameters.environment }}

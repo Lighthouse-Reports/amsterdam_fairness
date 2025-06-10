@@ -1,0 +1,5 @@
+# Filter Jupyter notebooks to remove outputs before committing.
+# Run the two commands below in your terminal before the first use:
+# git config filter.jupyter.clean nbstripout
+# git config filter.jupyter.smudge cat
+*.ipynb filter=jupyter

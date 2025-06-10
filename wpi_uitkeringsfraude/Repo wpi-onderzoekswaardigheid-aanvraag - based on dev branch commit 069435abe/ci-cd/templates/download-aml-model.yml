@@ -1,0 +1,79 @@
+parameters:
+- name: serviceConnectionName
+  displayName: Name of service connection to connect to AML
+  type: string
+- name: AMLModelName
+  displayName: Name of the AML model to be downloaded
+  type: string
+- name: AMLModelVersion
+  displayName: Version of the AML model to be downloaded
+  type: string
+- name: AMLWorkspaceName
+  displayName: AML workspace name
+  type: string
+- name: AMLResourceGroup
+  displayName: AML resource group
+  type: string
+- name: AMLSubscriptionID
+  displayName: AML subscription ID
+  type: string
+- name: downloadedModelDirectory
+  displayName: Directory to download model to
+  type: string
+- name: publishedModelArtifactsName
+  displayName: Name under which to publish the model artifacts for use within the pipeline
+  type: string
+- name: dependsOn
+  displayName: Name of job the template depends on, if any
+  type: object
+  default: []
+
+jobs:
+- job: DownloadModel
+  dependsOn: ${{ parameters.dependsOn }}
+  displayName: Download model file(s) from Analyse Services
+  pool: Datateam-Sociaal
+  steps:
+   - task: AzureCLI@2
+     displayName: Install and update Azure CLI ML extension
+     inputs:
+       azureSubscription: ${{ parameters.serviceConnectionName }}
+       scriptType: 'bash'
+       scriptLocation: 'inlineScript'
+       inlineScript: |
+         #!/bin/bash
+         ERR() {
+           if [ $1 -eq 0 ]; then
+             # Success message
+             echo "[ok] $2"
+           else
+             # Error message
+             echo "[error] $3"
+             exit $1
+           fi
+         }
+         az extension add -n ml
+         az extension update -n ml
+
+   - task: AzureCLI@2
+     name: downloadModelFiles
+     displayName: Download files
+     inputs:
+       azureSubscription: ${{ parameters.serviceConnectionName }}
+       scriptType: 'bash'
+       scriptLocation: 'inlineScript'
+       inlineScript: |
+         set -e  # Quit script & fail the task upon error
+
+         echo "az ml model download --name ${{ parameters.AMLModelName }} --version ${{ parameters.AMLModelVersion }} --download-path ${{ parameters.downloadedModelDirectory }} --workspace-name ${{ parameters.AMLWorkspaceName }} --resource-group ${{ parameters.AMLResourceGroup }} --subscription ${{ parameters.AMLSubscriptionID }}"
+         az ml model download \
+            --name ${{ parameters.AMLModelName }} \
+            --version ${{ parameters.AMLModelVersion }} \
+            --download-path ${{ parameters.downloadedModelDirectory }} \
+            --workspace-name ${{ parameters.AMLWorkspaceName }} \
+            --resource-group ${{ parameters.AMLResourceGroup }} \
+            --subscription ${{ parameters.AMLSubscriptionID }}
+
+   - publish: '$(System.DefaultWorkingDirectory)/${{ parameters.downloadedModelDirectory }}'
+     displayName: 'Publish downloaded model artifacts for later use in the pipeline'
+     artifact: ${{ parameters.publishedModelArtifactsName }}

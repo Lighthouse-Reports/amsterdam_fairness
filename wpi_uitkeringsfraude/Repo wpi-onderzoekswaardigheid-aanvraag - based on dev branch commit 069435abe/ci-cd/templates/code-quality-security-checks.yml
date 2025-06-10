@@ -1,0 +1,49 @@
+parameters:
+- name: repoName
+  displayName: Name of the repository to check
+  type: string
+- name: dependsOn
+  displayName: Name of job the template depends on, if any
+  type: object
+  default: []
+- name: pipAuditArgs
+  displayName: Additional args to pass to pip-audit, e.g. to exclude certain vulnerabilities
+  type: string
+  default: ""
+
+
+jobs:
+- job: CodeQualityAndSecurity
+  dependsOn: ${{ parameters.dependsOn }}
+  displayName: Code quality checks and security scanning
+  pool:
+    vmImage: ubuntu-20.04
+
+
+  steps:
+  - checkout: ${{ parameters.repoName }}
+
+  - task: CmdLine@2
+    displayName: Run pre-commit hooks
+    inputs:
+      script: |
+        pip install pre-commit==2.21.0
+        pre-commit run --all-files
+      workingDirectory: '$(Build.Repository.LocalPath)'
+
+  - task: CmdLine@2
+    displayName: Run Hadolint
+    inputs:
+      script: 'docker run --rm -i -v ${PWD}/.hadolint.yml:/bin/hadolint.yml -e XDG_CONFIG_HOME=/bin hadolint/hadolint < Dockerfile'
+      workingDirectory: '$(Build.Repository.LocalPath)'
+
+  - task: CmdLine@2
+    displayName: Run Pip Audit
+    inputs:
+      script: |
+        pip install --upgrade pip
+        pip install pip-audit==2.4.8
+        curl -sSL https://install.python-poetry.org | python3 - --version 1.1.15
+        /home/vsts/.local/bin/poetry export --without-hashes -f requirements.txt --output requirements.txt
+        pip-audit --no-deps --requirement requirements.txt ${{ parameters.pipAuditArgs }}
+      workingDirectory: '$(Build.Repository.LocalPath)'

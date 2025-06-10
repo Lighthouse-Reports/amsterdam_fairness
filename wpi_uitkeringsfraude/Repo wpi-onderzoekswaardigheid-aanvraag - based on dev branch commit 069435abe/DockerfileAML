@@ -1,0 +1,10 @@
+FROM mcr.microsoft.com/azureml/curated/sklearn-1.0-ubuntu20.04-py38-cpu
+
+RUN apt-get update \
+ && DEBIAN_FRONTEND=noninteractive \
+    apt-get install -y gcc build-essential libpq-dev python-dev libfreetype6-dev pkg-config
+
+RUN conda update -n base -c defaults conda
+
+ENV KEY_VAULT_NAME="this_value_will_only_be_used_in_production"
+ENV DATA_API_URL="this_value_will_only_be_used_in_production"

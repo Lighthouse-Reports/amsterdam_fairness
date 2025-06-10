@@ -1,0 +1,67 @@
+parameters:
+- name: dtapName
+  displayName: Name of the DTAP environment
+  type: string
+- name: downloadedModelDirectory
+  displayName: Directory to download model to
+  type: string
+- name: publishedModelArtifactsName
+  displayName: Name under which to publish the model artifacts for use within the pipeline
+  type: string
+
+
+jobs:  
+  - template: templates/code-quality-security-checks.yml
+    parameters:
+      repoName: self
+      pipAuditArgs: ""
+
+  - job: Test
+    displayName: Test model and API
+    pool: 'Datateam-Sociaal'
+
+    steps:
+      - checkout: self
+
+      - task: DownloadPipelineArtifact@2
+        displayName: Download model artifact
+        inputs:
+          source: current
+          artifact: $(publishedModelArtifactsName)
+          path: $(Build.SourcesDirectory)/$(downloadedModelDirectory)
+
+      - task: UsePythonVersion@0
+        inputs:
+          versionSpec: '3.8'
+          addToPath: true
+          architecture: 'x64'
+
+      - template: templates/authenticate-azure-artifacts.yml
+        parameters:
+          artifactsFeed: 'Datateam-Sociaal/team-AA'
+
+      - task: CmdLine@2
+        displayName: Install poetry packages
+        inputs:
+          script: |
+            curl -sSL https://install.python-poetry.org | python3 - --version 1.1.15
+            /root/.local/bin/poetry config virtualenvs.create false
+
+            export POETRY_HTTP_BASIC_GEMEENTE_USER=build
+            export POETRY_HTTP_BASIC_GEMEENTE_PASSWORD=$(PIPPASSWORD)
+
+            /root/.local/bin/poetry install --no-ansi --no-root
+            /root/.local/bin/poetry build
+
+      - task: CmdLine@2
+        displayName: Run tests
+        inputs:
+          script: |
+            /root/.local/bin/poetry run pytest tests/ --junitxml=junit/test-results.xml --cov=. --cov-report=xml
+
+      - task: PublishTestResults@2
+        displayName: Publish test results
+        condition: succeededOrFailed()
+        inputs:
+          testResultsFiles: "**/test-*.xml"
+          testRunTitle: "Publish test results for Python $(python.version)"

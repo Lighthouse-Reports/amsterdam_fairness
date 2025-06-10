@@ -1,0 +1,24 @@
+# This template creates a pipeline variable you can use as credentials to Azure Artifacts.
+# You can access it in the rest of the job using $(PIPPASSWORD).
+
+parameters:
+- name: artifactsFeed
+  displayName: Name of the artifact feed to authenticate to
+  type: string
+  default: 'Datateam-Sociaal/team-AA'
+
+steps:
+- task: PipAuthenticate@1
+  displayName: 'Authenticate Pip to private package feed'
+  inputs:
+    artifactFeeds: ${{ parameters.artifactsFeed }}
+    onlyAddExtraIndex: true  # Always check PyPI first
+
+- script: |
+    # Set Poetry login variables.
+    # Extract password from the authenticated Pip URL.
+    tmp=${PIP_EXTRA_INDEX_URL#https://*:}   # Remove prefix starting with "http://" and ending in ":"
+    pw=${tmp%@pkgs.dev.azure.com*}   # Remove everything after "@pkgs.dev.azure.com"
+    echo "##vso[task.setvariable variable=PIPPASSWORD]$pw"
+  displayName: Set pipeline variables for Poetry to authenticate to Azure Artifacts
+  name: SetPipAuthenticationVariables

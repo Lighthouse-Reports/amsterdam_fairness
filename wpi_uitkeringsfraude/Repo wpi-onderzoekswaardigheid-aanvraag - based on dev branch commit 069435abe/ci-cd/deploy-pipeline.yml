@@ -1,0 +1,91 @@
+parameters:
+  - name: dtapName
+    displayName: Name of the DTAP environment
+    type: string
+  - name: dtapLetter
+    displayName: 1-letter abbreviation of DTAP environment
+  - name: appService
+    displayName: Name of the app service to deploy to
+    type: string
+  - name: containerRegistry
+    displayName: Name of the container registry
+    type: string
+  - name: dockerImageName
+    displayName: Name under which to publish Docker image
+    type: string
+  - name: dockerImageTag
+    displayName: Tag under which to publish Docker image
+    type: string
+  - name: downloadedModelDirectory
+    displayName: Directory to temporarily download model artifacts to
+    type: string
+  - name: publishedModelArtifactsName
+    displayName: Name under which model artifacts were published
+    type: string
+  - name: deploymentEnv
+    displayName: Which environment (from ADO) to use
+    type: string
+
+
+jobs:
+  - deployment: setTeamAAAppServiceImg
+    displayName: "Set team AA app service to correct Docker image and restart it"
+    pool:
+      vmImage: ubuntu-20.04
+    variables:
+      serviceConnection: "ARM-CCC-DASO-${{ parameters.dtapName }}-01"
+      resourceGroup: "daso-infra-${{ parameters.dtapLetter }}-rg"
+    environment: ${{ parameters.deploymentEnv }}
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - task: AzureCLI@2
+            displayName: Set team AA app service to correct Docker image and restart it
+            inputs:
+              azureSubscription: ${{ variables.serviceConnection }}
+              scriptType: 'bash'
+              scriptLocation: 'inlineScript'
+              inlineScript: |
+                echo "az webapp config container set --name ${{ parameters.appService }} --resource-group $(resourceGroup) --docker-custom-image-name ${{ parameters.containerRegistry }}.azurecr.io/${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}"
+                az webapp config container set --name ${{ parameters.appService }} --resource-group $(resourceGroup) --docker-custom-image-name ${{ parameters.containerRegistry }}.azurecr.io/${{ parameters.dockerImageName }}:${{ parameters.dockerImageTag }}
+                
+                echo "az webapp restart --name ${{ parameters.appService }} --resource-group $(resourceGroup)"
+                az webapp restart --name ${{ parameters.appService }} --resource-group $(resourceGroup)
+
+
+  - job: ArchiveModel
+    displayName: Archive deployed model
+    dependsOn:
+      - setTeamAAAppServiceImg
+    condition: eq( '${{ parameters.dtapName }}', 'prd' )
+    variables:
+      serviceConnection: "ARM-CCC-DASO-${{ parameters.dtapName }}-01"
+    steps:
+      - task: DownloadPipelineArtifact@2
+        inputs:
+          source: current
+          artifact: $(publishedModelArtifactsName)
+          path: $(Build.SourcesDirectory)/$(downloadedModelDirectory)
+
+      - task: AzureCLI@2
+        continueOnError: false
+        timeoutInMinutes: 30
+        
+        inputs:
+          azureSubscription: ${{ variables.serviceConnection }}
+          scriptType: 'bash'
+          scriptLocation: 'inlineScript'
+          inlineScript: |
+            mkdir -p folder_to_upload/models/$(projectVersion)
+            mv ./model_artifacts folder_to_upload/models/$(projectVersion)
+
+            az login
+            # Note: The `2>&1` is required to redirect the output from stderr to stdout.
+            BLOB_UPLOAD_OUTPUT=$(az storage blob upload-batch --account-name aaodataweupq6n7hrbqbokeq -d archive -s ./folder_to_upload --pattern models/$(projectVersion)/* --tier Archive --auth-mode login --overwrite False 2>&1)
+            echo $BLOB_UPLOAD_OUTPUT
+
+            # Fail the task if the blob upload was not succesful.
+            if [[ $BLOB_UPLOAD_OUTPUT == *"ERROR"* ]]; then
+              exit 1
+            fi
