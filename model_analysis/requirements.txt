@@ -1,0 +1,10 @@
+category-encoders==2.4.0
+numpy==1.22.0
+scikit-learn==0.24.2
+interpret==0.2.7
+interpret-core==0.2.7
+pandas==1.4.4
+pre-commit==2.21.0
+sklearn-pandas==2.0.3
+xgboost==1.5.2
+Jinja2==3.0.3
