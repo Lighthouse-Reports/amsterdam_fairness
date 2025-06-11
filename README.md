@@ -1,7 +1,8 @@
 # Inside Amsterdam’s high-stakes experiment to create fair welfare AI
 This repository includes our analysis into Amsterdam's Slimme Check algorithm. Slimme Check was an attempt by the city of Amsterdam to predict which welfare applications were likely to be fraudulent or contain errors. Stories based on this analysis have been published by 
+- [MIT Tech](https://www.technologyreview.com/2025/06/11/1118233/amsterdam-fair-welfare-ai-discriminatory-algorithms-failure/)
 - [Trouw](https://www.trouw.nl/verdieping/amsterdam-wilde-met-ai-de-bijstand-eerlijker-en-efficienter-maken-het-liep-anders~b2890374/)
-- [MIT Tech]()
+  
   
 We also published an extensive [methdology]() on our website.
 
